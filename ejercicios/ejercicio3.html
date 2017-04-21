@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html>
+<!-- 
+	Documento que nos sirve de plantilla para realizar nuestros proyectos.
+-->
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio 3. Formulario de reserva.</title>
+        <link rel="stylesheet" type="text/css" href="../css/estilos.css" media="screen" />
+
+    </head>
+    
+    <body>
+	
+	<h1>Ejercicio 3. Formulario de reserva.</h1>
+	
+	<form action="mailto:reservas@mihotel.com" method="post" enctype="text/plain">
+	
+		<table>
+			<tr>
+				<td> <b>Nombre:</b> </td>
+				<td width="70%"><input type="text" name="Nombre"></input><br/></td>
+			</tr>
+			<tr>
+				<td><b>Apellidos:</b></td>
+				<td><input type="text" name="Apellidos"></input><br/></td>
+			</tr>
+			<tr>
+				<td><b>Teléfono:</b></td>
+				<td><input type="text" name="Telefono"/></input><br/></td>
+			</tr>
+			<tr>
+				<td><b>E-Mail:</b></td>
+				<td><input type="text" name="Email"/></input><br/></td>
+			</tr>
+			<tr>
+				<td><b>Fecha de entrada:</b></td>
+				<td>
+					<select>
+						<option value="dia_">Día</option>
+						<option value="dia_01">1</option>
+						<option value="dia_02">2</option>
+						<option value="dia_03">3</option>
+						<option value="dia_04">4</option>
+						<option value="dia_05">5</option>
+						<option value="dia_06">6</option>
+						<option value="dia_07">7</option>
+						<option value="dia_08">8</option>
+						<option value="dia_09">9</option>
+						<option value="dia_10">10</option>
+						<option value="dia_11">11</option>
+						<option value="dia_12">12</option>
+						<option value="dia_13">13</option>
+						<option value="dia_14">14</option>
+						<option value="dia_15">15</option>
+						<option value="dia_16">16</option>
+						<option value="dia_17">17</option>
+						<option value="dia_18">18</option>
+						<option value="dia_19">19</option>
+						<option value="dia_20">20</option>
+						<option value="dia_21">21</option>
+						<option value="dia_22">22</option>
+						<option value="dia_23">23</option>
+						<option value="dia_24">24</option>
+						<option value="dia_25">25</option>
+						<option value="dia_26">26</option>
+						<option value="dia_27">27</option>
+						<option value="dia_28">28</option>
+						<option value="dia_29">29</option>
+						<option value="dia_30">30</option>
+						<option value="dia_31">31</option>
+					</select>
+					<select>
+						<option value="mes">Mes</option>
+						<option value="ene">Enero</option>
+						<option value="feb">Febrero</option>
+						<option value="mar">Marzo</option>
+						<option value="abr">Abril</option>
+						<option value="may">Mayo</option>
+						<option value="jun">Junio</option>
+						<option value="jul">Julio</option>
+						<option value="ago">Agosto</option>
+						<option value="sep">Septiembre</option>
+						<option value="oct">Octubre</option>
+						<option value="nov">Noviembre</option>
+						<option value="dic">Diciembre</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><b>Número de noches:</b></td>
+				<td>
+					<select>
+						<option value="00_noches">Noches</option>
+						<option value="01_noches">1</option>
+						<option value="02_noches">2</option>
+						<option value="03_noches">3</option>
+						<option value="04_noches">4</option>
+						<option value="05_noches">5</option>
+						<option value="06_noches">6</option>
+						<option value="07_noches">7</option>
+						<option value="08_noches">8</option>
+						<option value="09_noches">9</option>
+						<option value="10_noches">10</option>
+						<option value="11_noches">11</option>
+						<option value="12_noches">12</option>
+						<option value="13_noches">13</option>
+						<option value="14_noches">14</option>
+						<option value="15_noches">15</option>
+						<option value="16_noches">16</option>
+						<option value="17_noches">17</option>
+						<option value="18_noches">18</option>
+						<option value="19_noches">19</option>
+						<option value="20_noches">20</option>
+						<option value="21_noches">21</option>
+						<option value="22_noches">22</option>
+						<option value="23_noches">23</option>
+						<option value="24_noches">24</option>
+						<option value="25_noches">25</option>
+						<option value="26_noches">26</option>
+						<option value="27_noches">27</option>
+						<option value="28_noches">28</option>
+						<option value="29_noches">29</option>
+						<option value="30_noches">30</option>
+						<option value="31_noches">31</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><b>Tipo de habitación:</b></td>
+				<td>
+					<input type="radio" name="tipo_habitacion" value="simple"/>Simple.<br/>
+					<input type="radio" name="tipo_habitacion" value="doble"/>Doble.<br/>
+					<input type="radio" name="tipo_habitacion" value="matrimonio"/>Matrimonio.<br/>
+				</td>
+			</tr>
+			<tr>
+				<td><b>Extras:</b></td>
+				<td>
+					<input name="Extras" type="checkbox" value="desayuno"/>		Desayuno.<br/>
+					<input name="Extras" type="checkbox" value="comida"/>		Comida.<br/>
+					<input name="Extras" type="checkbox" value="cena"/>			Cena.<br/>
+					<input name="Extras" type="checkbox" value="cama_extra"/>	Cama supletoria.<br/>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><b>Comentarios:</b></td>
+				<td><textarea name="comentarios" rows="8" cols="35"></textarea></td>
+			</tr>
+			
+			<tr>
+				<td><input type="reset" name="Borrar" value="BORRAR"></input></td>
+				<td><button type="submit" name="Enviar" value="ENVIAR">ENVIAR</button></td>
+			</tr>
+		</table>
+	</form>  
+	<br/>
+	<b>Pulse [BORRAR] para limpiar el formulario, y [ENVIAR] para completar el proceso.</b>
+
+	<h2><a href="../index.html">[VOLVER]</a></h2>
+	
+    </body>
+</html>

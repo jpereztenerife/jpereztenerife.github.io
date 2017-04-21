@@ -1,0 +1,244 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/ xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- 
+	Jesús M. Pérez González. 
+-->
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Ejercicios  Javascript II. 4: Compra de un coche</title>
+		
+		<!-- Código javascript -->
+		<script type="text/javascript">
+			
+			window.onload = function() {
+				actualiza();
+				
+			}
+			
+			var precio_final		= 	12000;
+			var aumento_guardado	= 	0;
+			var motor_guardado;
+			var modelo_guardado		=	1;
+			var modelo_elegido		=	1;
+			var color_guardado;
+			var precios_motor		=	[0, 1500, 3000];
+			var precios_modelo		=	[-2000,0,1500];
+			var precios_color		=	[0, 0, 0, -500, -600];
+			
+			<!-- Función para sumar el aumento por equipamiento extra -->
+			function equipamiento () {
+				var aumento = 0;
+				if (document.getElementById("metalizada").checked === true) {
+					aumento += 750;
+				}
+				if (document.getElementById("aleacion").checked === true) {
+					aumento += 200;
+				}
+				if (document.getElementById("climatizador").checked === true) {
+					aumento += 800;
+				}
+				if (document.getElementById("gps").checked === true) {
+					aumento += 340;
+				}
+				if (document.getElementById("onconnect").checked === true) {
+					aumento += 800;
+				}
+				// calculamos los cambios y aplicamos la diferencia
+				precio_final = precio_final + (aumento - aumento_guardado);
+				aumento_guardado = aumento;
+				actualiza();
+				
+			}
+			
+			<!-- Función para registrar la selección de motor previa -->
+			function motorGuardado () {
+				motor_guardado =  document.getElementById("motores").selectedIndex;
+			}
+			
+			<!-- Función para cambiar el modelo y activar/desactivar modelo de 3 puertas -->
+			function cambiarMotor () {
+				var seleccion = document.getElementById("motores").selectedIndex;
+				
+				switch (seleccion) {
+					case 0:
+						precio_final = precio_final - precios_motor[motor_guardado];
+						document.getElementById("modelo_3").disabled = false; // activamos modelo de 3 puertas
+					break;
+					
+					case 1:
+					case 2:
+						precio_final = precio_final + precios_motor[seleccion] - precios_motor[motor_guardado];
+						document.getElementById("modelo_3").disabled = true; // desactivamos modelo de 3 puertas
+						document.getElementById("modelo_3").checked = false; // deseleccionamos modelo de 3 puertas
+					break;
+				}
+				
+				motor_guardado =  seleccion;
+				actualiza();
+			}
+			
+			
+			function cambiarModelo () {
+				
+				if (document.getElementById("modelo_3").checked === true) {
+					modelo_elegido = 0;
+				} else if (document.getElementById("modelo_5").checked ===true) {
+					modelo_elegido = 1;
+				} else {
+					modelo_elegido = 2;
+				}
+				
+				if (modelo_elegido !== 2) {
+					document.getElementById("onconnect").disabled = true; // desactivamos on-connect
+					document.getElementById("onconnect").checked = false; // deseleccionamos on-connect
+				} else {
+					document.getElementById("onconnect").disabled = false; // reactivamos on-connect
+				}
+				if (modelo_elegido != modelo_guardado){
+					precio_final = precio_final + precios_modelo[modelo_elegido] - precios_modelo[modelo_guardado];
+				}
+				modelo_guardado = modelo_elegido;
+				actualiza();
+			}
+			
+			<!-- Función para registrar la selección de color previa -->
+			function colorGuardado () {
+				color_guardado =  document.getElementById("colores").selectedIndex;
+			}
+			
+			
+			function cambiarColor () {
+				var seleccion = document.getElementById("colores").selectedIndex;
+				
+				switch (seleccion) {
+					case 0:
+					case 1:
+					case 2:
+						precio_final = precio_final - precios_color[color_guardado];
+						document.getElementById("metalizada").disabled = false; // reactivamos metalizado
+					break;
+					
+					case 3:
+					case 4:
+						precio_final = precio_final + precios_color[seleccion] - precios_color[color_guardado];
+						document.getElementById("metalizada").checked = false; // deseleccionamos metalizado
+						document.getElementById("metalizada").disabled = true; // desactivamos metalizado
+					break;
+					
+					default:
+					break;
+				}
+				color_guardado = seleccion;
+				actualiza()
+			}
+			
+			
+			function actualiza () {
+				document.getElementById("precio_final").innerHTML = precio_final + " €"; 
+			}
+			
+			
+			
+			
+		</script>
+		
+		<!-- Estilos para la página -->
+		<style type="text/css">
+			body {
+				background-color:	#A7D56A;
+			}
+			
+			table {
+				position:relative;
+				background-color: lightgray;
+				border: black 1px solid;
+				border-radius: 10px 10px 10px 10px;
+				width: 700px;
+				height: 180px;
+				padding-top: 10px;
+				padding-bottom: 10px;
+				padding-left: 10px;
+				padding-right: 10px;
+				margin-left: 50px;
+				text-align: left;
+			}
+		  
+		</style>
+		
+	</head>
+
+	<body>
+
+		<h1>Ejercicios  Javascript II. 4: Compra de un coche.</h1>
+		<br>
+		<form>
+			<table>
+				<tr>
+					<td>Precio inicial</td>
+					<td>12000 €</td>
+				</tr>
+			
+				<tr>
+					<td>Motor</td>
+					<td>
+						<select id="motores"  onfocus="motorGuardado()" onchange="cambiarMotor()">
+							<option value="0" selected >Gasolina</option>
+							<option value="1">Diesel (+1500 €)</option>
+							<option value="2">Híbrido (+3000 €)</option>
+						</select>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>Modelo</td>
+					<td>
+						<input type="radio" name="modelos" value="0" id="modelo_3" onclick=" cambiarModelo()" > 3 puertas - solo para gasolina (-2000 €) <br>
+						<input type="radio" name="modelos" value="1" id="modelo_5" onclick=" cambiarModelo()" selected > 5 puertas <br>
+						<input type="radio" name="modelos" value="2" id="modelo_f" onclick=" cambiarModelo()" > Familiar (+1500 €) <br>
+				</tr>
+				
+				<tr>
+					<td>Color</td>
+					<td><select id="colores" onfocus="colorGuardado()" onchange="cambiarColor()">
+							<option value="0" selected>Rojo</option>
+							<option value="1">Verde</option>
+							<option value="2">Naranja</option>
+							<option value="3">Blanco (-500 €)</option>
+							<option value="4">Negro (-600 €)</option>
+						</select>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>Equipamiento</td>
+					<td>
+						<input name="Equipamiento" type="checkbox" id="metalizada" onclick="equipamiento()">		Pintura Metalizada: +750 €, disponible solo para rojo, verde y naranja.<br/>
+						<input name="Equipamiento" type="checkbox" id="aleacion" onclick="equipamiento()">		Llanta de aleación: +200 €<br/>
+						<input name="Equipamiento" type="checkbox" id="climatizador" onclick="equipamiento()">	Climatizador: +800 €<br/>
+						<input name="Equipamiento" type="checkbox" id="gps" onclick="equipamiento()">			GPS: +340 €<br/>
+						<input name="Equipamiento" type="checkbox" id="onconnect" onclick="equipamiento()">		Sistema On-Connected: +800 € (solo disponible para el modelo familiar)<br/>
+					
+					</td>
+				</tr>
+					
+				<tr>
+					<td>Precio final</td>
+					<td ><b><div id="precio_final">xxx €</div></b></td>
+				</tr>
+			
+			</table>
+		</form>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	<br><br><h2><a href="../index.html">[Volver]</a></h2>		
+	</body>
+</html>

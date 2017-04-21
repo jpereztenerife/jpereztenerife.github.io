@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/ xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- 
+	Jesús M. Pérez González. 
+-->
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>Ejercicio javascript 2: Preguntando la tabla.</title>
+		
+		<!-- Estilos para la página -->
+		<style type="text/css">
+			body {
+				background-color:	#9593BD;
+			}
+			table td {
+				vertical-align: top;
+				height: 250px;
+			}
+		  
+		</style>
+		
+		<script type="text/javascript">
+			var mirespuesta;
+			var area;
+			var num;
+			var randnum;
+			var linea;
+			var linea2;
+			var aciertos;
+			
+			function preguntar() {
+				
+				document.getElementById("div_respuesta").style.display='none';
+				area = document.getElementById("area");
+				num = document.getElementById("tabla").value;
+				
+				<!-- Generamos un número aleatorio entre 1 y 10 -->
+				randnum = Math.floor(Math.random() * 10) + 1;
+				area.innerHTML = "Comprobemos tus conocimientos:<br><br>";
+				linea = "¿Cuánto es " + num + " x " + randnum + "?";
+				
+				document.getElementById("lab_pregunta").innerText=linea;
+				document.getElementById("div_pregunta").style.display='inherit';
+				
+			}
+			
+			function comprobar() {
+				mirespuesta = document.getElementById("resultado").value;
+				if(mirespuesta==num*randnum){
+					linea2 = "¡Has acertado!";
+					<!-- document.getElementById("lab_respuesta").innerText="¡Correcto!";
+				}else{
+					linea2 = "¡Has fallado!";
+					<!-- document.getElementById("lab_respuesta").innerText="¡Incorrecto!";
+				}
+				document.getElementById("lab_respuesta").innerText=linea2;
+				document.getElementById("div_respuesta").style.display='inherit';
+				}
+
+			
+		</script>
+		
+	</head>
+	
+	<body>
+		
+		<h1>Ejercicio javascript 2: Preguntando la tabla.</h1>
+		<br/><br/>
+		<div>
+		<form>
+			<table>
+				<tr>
+					<td width ="60%">
+						¿Qué tabla de multiplicar repasarás? <br><br><br><input type="text" name="tabla" id="tabla" size="2" onChange="preguntar()">
+						<input name="but1" type="button" value="Preguntar" onClick="preguntar()">
+					</td>
+					<td>
+						<div id="area">
+						</div>
+						
+						<div id="div_pregunta" hidden>
+							<b><label id ="lab_pregunta"></label></b><br>
+							<label>Respuesta:</label>
+							<input type="text" id="resultado" size="3" value="" onChange="comprobar()">
+							<input name="but2" type="button" value="Comprobar" onClick="comprobar()">
+						</div>
+						<br><br>
+						<div id="div_respuesta" hidden>
+							<b><label id="lab_respuesta"></label></b>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</form>
+		</div>
+		
+	<br><br><h2><a href="../index.html">[Volver]</a></h2>	
+	</body>
+</html>
+
+
+
+
+

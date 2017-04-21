@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/ xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- 
+	Jesús M. Pérez González. 
+-->
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>Ejercicio javascript 7: Tabla de colores</title>
+		
+		
+		<!-- Estilos para la página -->
+		<style type="text/css">
+			body {
+				background-color:	#9593BD;
+			}
+			
+			table {
+				margin-left: 50px;
+				width: 60%;
+				border: 1px solid black;
+			}
+			
+			table td tr {
+				border: 1px solid black;
+				vertical-align: top;
+				text-align: left;
+				padding-left: 10px;
+				padding-top: 15px;
+				height: 30px;
+			}
+			
+			table td {
+				 width:	40px;
+			}
+			
+			tr:nth-child(odd) {
+				background-color: #be604d;
+			}
+			
+		</style>
+		
+		
+		<!-- Código javascript -->
+		<script type="text/javascript">
+			function crearTabla() {
+				var filas = document.getElementById("filas").value;
+				var columnas = document.getElementById("columnas").value;
+				
+				var salida = "<br><br><table>";
+				salida += "<th colspan=\""+columnas+"\">"+"Esta es la tabla de "+filas+" filas y "+columnas+" columnas."+"</th>";
+				<!-- Bucle para crear la tabla
+				for (i = 0; i < filas; i++) {
+					salida += "<tr>";
+					for (j = 0; j < columnas; j++) {
+						salida += "<td>"+"(" + i + "," + j + ")"+"</td>"
+					}
+					salida += "</tr>";
+				}
+				salida += "</table>";
+				document.getElementById("tabla").innerHTML = salida;
+			}
+			
+			
+			
+		</script>
+		
+		
+	</head>
+
+	<body>
+
+		<h1>Ejercicio javascript 7: Tabla de colores.</h1>
+		<br/><br/>
+		
+		<form>
+			Filas: <input id="filas" type="text" name="filas" size="4"><br>
+			Columnas: <input id="columnas" type="text" name="columnas" size="4"><br><br>
+			
+			<input type="button" value="Crear la tabla" onclick="crearTabla()"><br><br>
+		</form>
+		
+		<div id="tabla"></div>
+		
+	<br><br><h2><a href="../index.html">[Volver]</a></h2>	
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

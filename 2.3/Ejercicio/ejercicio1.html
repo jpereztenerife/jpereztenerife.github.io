@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/ xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- 
+	Jesús M. Pérez González. 
+-->
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>Ejercicio javascript 1: Tabla de multiplicar</title>
+		
+		<!-- Código javascript -->
+		<script type="text/javascript">
+			function multiplicar() {
+				var num = document.getElementById("tabla").value;
+				var respuesta = document.getElementById("respuesta");
+				respuesta.innerHTML = "La tabla del "+num+" es:<br>";
+				for (i=1; i<=10; i++) {
+					// otro método de mostrarlo.
+					//document.writeln(num + " x " + i + " = " + num*i + "<br>");
+					respuesta.innerHTML += num + " x " + i + " = " + num*i + "<br>";
+				}
+			}
+		</script>
+		
+		<!-- Estilos para la página -->
+		<style type="text/css">
+			body {
+				background-color:	#9593BD;
+			}
+			
+			table td {
+				vertical-align: top
+			}
+		  
+		</style>
+		
+	</head>
+
+	<body>
+
+		<h1>Ejercicio javascript 1: Tabla de multiplicar.</h1>
+		<br/><br/>
+		<table>
+			<tr>
+				<td width ="70%">
+					<form>
+						¿Qué tabla de multiplicar desea ver? <br><br><input type="text" name="tabla1" id="tabla" size="2" onChange="multiplicar()">
+						<input name="ejecutar" type="button" value="Mostrar" onClick="multiplicar()">
+					</form>
+				</td>
+				<td width="50%"><div id="respuesta"></div></td>
+			</tr>
+		</table>
+	<br><br><h2><a href="../index.html">[Volver]</a></h2>		
+	</body>
+</html>

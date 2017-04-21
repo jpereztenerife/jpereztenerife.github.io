@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/ xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- 
+	Jesús M. Pérez González. 
+-->
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Ejercicios  Javascript II. 1: Tirada de un dado</title>
+		
+		<!-- Código javascript -->
+		<script type="text/javascript">
+			
+			function lanzar (){
+				var tirada = Math.floor(Math.random() * 6) + 1;
+				
+				document.images.dado.src = "img/dado" + tirada + ".png";
+				texto.innerHTML = "Has sacado un " + tirada;
+			}
+			
+		</script>
+		
+		<!-- Estilos para la página -->
+		<style type="text/css">
+			body {
+				background-color:	#A7D56A;
+			}
+			
+			table {
+				position:relative;
+				background-color: lightgray;
+				border: black 1px solid;
+				border-radius: 10px 10px 10px 10px;
+				width: 700px;
+				height: 180px;
+				padding-top: 10px;
+				padding-bottom: 10px;
+				padding-left: 10px;
+				padding-right: 10px;
+				margin-left: 50px;
+				text-align: center;
+			}
+			
+			
+		</style>
+		
+	</head>
+
+	<body>
+
+		<h1>Ejercicios  Javascript II. 3: Tirada de un dado.</h1>
+		<br/>
+		
+		<table>
+			<tr>
+				<td width =50%>
+					<form>
+						<h2>¡Prueba tu suerte!</h2><br>
+						<input type="button" value="¡Lanza el dado!" onClick="lanzar()">
+					</form><br>
+				</td>
+				
+				<td>
+					<img name="dado" src=""><br>
+					<div id="texto"></div>
+				</td>
+			</tr>
+			
+		
+		
+		
+		</table>
+		
+	<br><br><h2><a href="../index.html">[Volver]</a></h2>		
+	</body>
+</html>

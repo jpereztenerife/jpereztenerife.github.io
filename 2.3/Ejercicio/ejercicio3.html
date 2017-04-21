@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/ xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- 
+	Jesús M. Pérez González. 
+-->
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>Ejercicio javascript 3: Formulario con onfocus y onblur.</title>
+		
+		<!-- Estilos para la página -->
+		<style type="text/css">
+			body {
+				background-color:	#9593BD;
+			}
+			
+			#contenido {
+				width: 400px;
+				height: 120px;
+				margin-left: 150px;
+				padding-left: 50px;
+				padding-top: 50px;
+				text-align: center;
+				background-color: #B5ADB5;
+				border: solid 1px black;
+				center;
+			}
+			
+			#contenido label {
+				background-color: #A19BC3;
+				font-weight: bold;
+				width: 150px; 
+				float: left;
+			}
+			
+			.enfocado {
+				background-color: #9B7CFF;
+			}
+			
+			.desenfocado {
+				background-color: #7C4699;
+			}
+			
+		</style>
+		
+		<script type="text/javascript">
+			function color1 (estado) {
+				estado.className="enfocado";
+			}
+			
+			function color2 (estado) {
+				estado.className="desenfocado";
+			}
+			
+			function limpiar () {
+				<!-- Usamos un botón del formulario para limpiar el estado de los campos -->
+				document.getElementById("form_nombre").className="";
+				document.getElementById("form_direccion").className="";
+			}
+			
+		</script>
+		
+	</head>
+	
+	<body>
+		
+		<h1>Ejercicio javascript 3: Formulario con <i>onfocus</i> y <i>onblur</i>.</h1>
+		<br/><br/>
+		<div id="contenido">
+			<form>
+				<label>Nombre:</label> <input type="text" id="form_nombre" name="nombre" onfocus="color1(this)" onblur="color2(this)"><br>
+				<label>Dirección:</label> <input type="text" id="form_direccion" name="direccion" onfocus="color1(this)" onblur="color2(this)">
+				<br><br>
+				<input type="reset" type="button" value="Limpiar todo" onclick="limpiar()">
+			</form>
+			
+		</div>
+		
+	<br><br><h2><a href="../index.html">[Volver]</a></h2>	
+	</body>
+</html>
+
+
+
+
+

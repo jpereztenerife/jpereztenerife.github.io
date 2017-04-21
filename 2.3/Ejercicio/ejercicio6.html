@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/ xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- 
+	Jesús M. Pérez González. 
+-->
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>Ejercicio javascript 6: Simulación de alert</title>
+
+		<!-- Estilos para la página -->
+		<style type="text/css">
+			body {
+				background-color:	#9593BD;
+			}
+			
+			table td {
+				vertical-align: top
+			}
+			
+			
+			#mensaje {
+			
+			display: none;
+			position:fixed;
+			left: 50%;
+			top: 40%;
+			background-color: lightgray;
+			border: black 1px solid;
+			width: 270px;
+			height: 180px;
+			padding-top: 10px;
+			margin-top:-75px;
+			margin-left:-135px;
+			text-align: center;
+			
+			
+			}
+			
+		
+		</style>
+		
+		
+		<!-- Código javascript -->
+		<script type="text/javascript">
+			function alerta() {
+				var texto = document.getElementById("emergencia").value;
+				<!-- Escribimos el texto en la etiqueta salida
+				document.getElementById("salida").innerText=texto;
+				<!-- Hacemos visible la "ventana"
+				document.getElementById("mensaje").style.display = "block";
+			}
+			
+			function cerrar() {
+				document.getElementById("mensaje").style.display = "none";
+			}
+			
+		</script>
+		
+
+		
+	</head>
+
+	<body>
+
+		<h1>Ejercicio javascript 6: Simulación de <i>alert</i>.</h1>
+		<br/><br/>
+		
+		<form>
+		<label>¿Cuál es la emergencia?</label>
+		<input id="emergencia" type="text" name="emergencia" onblur="alerta()"><br>
+		
+		</form>
+		
+		
+		
+		
+		
+		
+		
+		<div id="mensaje">
+			<h2>¡Alerta!</h2><br>
+			<hr>
+			<b><label id="salida"></label></b><br><br>
+			<input type="button" value="[Cerrar]" onclick="cerrar()" />
+		</div>
+		
+	<br><br><h2><a href="../index.html">[Volver]</a></h2>	
+	</body>
+</html>
+
+
+
+
+
+

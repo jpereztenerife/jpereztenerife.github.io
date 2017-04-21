@@ -1,0 +1,206 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/ xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- 
+	Jesús M. Pérez González. 
+-->
+	<head>
+		<meta charset="UTF-8">
+		<title>Ejercicios Javascript II. 1: Calculadora</title>
+		
+		<!-- Código javascript -->
+		<script type="text/javascript">
+			
+			window.onload = function(){ 
+				display.innerHTML = mostrado;
+			}
+			
+			var mostrado	=	"0";
+			var resuelto	=	false;
+			
+			<!-- función para botones de borrado -->
+			function borrar (tipo) {
+				switch (tipo) {
+					case 1:	//borrar todo
+						mostrado	=	"0";
+					break;
+					
+					case 2:	//borrar ultimo
+						if (mostrado.length !== 1) {
+							mostrado = mostrado.substring(0, mostrado.length - 1);
+						} else {
+							mostrado = "0";
+						}
+					break;
+				}
+				
+				display.innerHTML = mostrado;
+			
+			}
+			
+			
+			<!-- función para mostrar en pantalla -->
+			function mostrar (num) {
+				if (resuelto) {
+					mostrado = 0;
+					resuelto = false;
+				}
+			
+				if (mostrado == "0") {
+					mostrado = num;
+				} else {
+					mostrado = mostrado + num;
+				}
+				display.innerHTML = mostrado;
+			}
+			
+			
+			<!-- función para usar operadores -->
+			function operar (tipo) {
+				resuelto = false;
+				switch (tipo) {
+					case "+":
+						mostrado = mostrado + " + ";
+					break;
+					
+					case "-":
+						mostrado = mostrado + " - ";
+						
+					break;
+					
+					case "*":
+						mostrado = mostrado + " * ";
+						
+					break;
+					
+					case "/":
+						mostrado = mostrado + " / ";
+						
+					break;
+				}
+				
+				display.innerHTML = mostrado;
+				
+			}
+			
+			<!-- función para calcular el resultado -->
+			function calcular () {
+				mostrado = eval(display.innerHTML);
+				display.innerHTML = eval(display.innerHTML);
+				resuelto = true;
+			}
+			
+			
+			
+		</script>
+		
+		<!-- Estilos para la página -->
+		<style type="text/css">
+			body {
+				background-color:	#A7D56A;
+			}
+			
+			table {
+				position:relative;
+				left: 50%;
+				background-color: lightgray;
+				border: black 1px solid;
+				border-radius: 5px 5px 5px 5px;
+				width: 250px;
+				height: 180px;
+				padding-top: 10px;
+				padding-bottom: 10px;
+				margin-left:-135px;
+				text-align: center;
+			}
+			
+			.calculadora input.ancho {
+				width: 107px; 
+				height: 45px;
+			}
+			
+			.calculadora [type=button] { 
+			
+				border-radius: 5px 5px 5px 5px;
+				width: 45px; 
+				height: 45px; 
+				font-size: 26px;
+				background-color: #DBDBFF;
+			}
+			
+			.calculadora input.operador {
+				background-color: #858BBD;
+			}
+			
+			#display {
+				position:relative;
+				
+				border: black 1px solid;
+				border-radius: 5px 5px 5px 5px;
+				text-align: right;
+				font-size: 24px;
+				padding: 10px 20px;
+				background-color: white;
+				
+				padding-bottom: 10px;
+				
+			}
+			
+		  
+		</style>
+		
+	</head>
+
+	<body>
+
+		<h1>Ejercicios Javascript II. 1: Calculadora.</h1>
+		<br/>
+		
+		<form class="calculadora">
+		
+		<table>
+			<thead>	<tr>
+				<th id="display" colspan="4"></th>
+			</tr> </thead>
+			
+			<tr>
+				<th colspan="2"><input type="button" value="C" onclick="borrar(1)" class="ancho"></th> <!-- borrartodo -->
+				<th><input type="button" value="←" onclick="borrar(2)"></th> <!-- borrarultimo -->
+				<th><input type="button" value="+" onclick="operar('+')" class="operador"></th>
+			</tr>
+		
+			<tr>
+				<th><input type="button" value="7" onclick="mostrar('7')"></th>
+				<th><input type="button" value="8" onclick="mostrar('8')"></th>
+				<th><input type="button" value="9" onclick="mostrar('9')"></th>
+				<th><input type="button" value="-" onclick="operar('-')" class="operador"></th>
+			</tr>
+		
+			<tr>
+				<th><input type="button" value="4" onclick="mostrar('4')"></th>
+				<th><input type="button" value="5" onclick="mostrar('5')"></th>
+				<th><input type="button" value="6" onclick="mostrar('6')"></th>
+				<th><input type="button" value="×" onclick="operar('*')" class="operador"></th>
+			</tr>
+		
+			<tr>
+				<th><input type="button" value="1" onclick="mostrar('1')"></th>
+				<th><input type="button" value="2" onclick="mostrar('2')"></th>
+				<th><input type="button" value="3" onclick="mostrar('3')"></th>
+				<th><input type="button" value="÷" onclick="operar('/')" class="operador"></th>
+			</tr>
+		
+			<tr>
+				<th><input type="button" value="." onclick="mostrar('.')"></th>
+				<th><input type="button" value="0" onclick="mostrar('0')"></th>
+				<th colspan="2"><input type="button" value="=" onclick="calcular()" class="ancho"></th>
+			</tr>
+		
+		
+		
+		</table>
+		
+		</form>
+		
+	<br><br><h2><a href="../index.html">[Volver]</a></h2>		
+	</body>
+</html>

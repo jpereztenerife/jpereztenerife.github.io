@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/ xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- 
+	Jesús M. Pérez González. 
+-->
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>Ejercicio javascript 8: Formulario con avisos</title>
+		
+		
+		<!-- Estilos para la página -->
+		<style type="text/css">
+			body {
+				background-color: #9593BD;
+			}
+			
+			table {
+				margin-left: 50px;
+				width: 60%;
+				border: 1px solid black;
+			}
+			
+			#aviso_nombre, #aviso_apellidos {
+				display: none;
+				color: darkred;
+			}
+			
+		</style>
+		
+		
+		<!-- Código javascript -->
+		<script type="text/javascript">
+			function cargar_datos(){
+				cargaIslas();
+				cargaDia();
+				cargaMes();
+				cargaAnio();
+			}
+			
+			function compruebaNombre() {
+				var nomb = document.getElementById("nombre").value;
+				if (nomb == "") {
+					document.getElementById("aviso_nombre").style.display="initial";
+				}
+				else {
+					document.getElementById("aviso_nombre").style.display="none";
+				}
+			}
+			
+			function compruebaApellidos() {
+				var nomb = document.getElementById("apellidos").value;
+				if (nomb == "") {
+					document.getElementById("aviso_apellidos").style.display="initial";
+				}
+				else {
+					document.getElementById("aviso_apellidos").style.display="none";
+				}
+			}
+			
+			function cargaIslas() {
+				<!--Carga Islas-->
+				var array_islas = ["Tenerife","Gran Canaria","La Palma","La Gomera","El Hierro","Fuerteventura","Lanzarote"];
+				
+				
+				<!--Carga selector de Islas-->
+				opcion = document.getElementById("islas");
+				
+				for (var i = 0; i < array_islas.length; i++) {
+					var opt = document.createElement("option");
+					opt.value = array_islas[i];
+					opt.innerHTML = array_islas[i];
+					opcion.appendChild(opt);
+				}
+			}
+			
+			function cargaDia() {
+				opcion  = document.getElementById("dias");
+				for (var i = 1; i <= 31; i++) {
+					var opt = document.createElement("option");
+					opt.value = i;
+					opt.innerHTML = i;
+					opcion.appendChild(opt);
+				}
+			}
+			
+			function cargaMes() {
+				var array_meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", 
+                             "Junio", "Julio", "Agosto", "Septiembre", 
+                             "Octubre", "Noviembre", "Diciembre"];
+				
+				opcion  = document.getElementById("meses");
+				for (var i = 0; i < array_meses.length; i++) {
+					var optm = document.createElement("option");
+					optm.value = array_meses[i];
+					optm.innerHTML = array_meses[i];
+					opcion.appendChild(optm);
+				}
+			}
+			
+			function cargaAnio() {
+				opcion  = document.getElementById("anios");
+				for (var i = 2017; i >= 1900; i--) {
+					var opt = document.createElement("option");
+					opt.value = i;
+					opt.innerHTML = i;
+					opcion.appendChild(opt);
+				}
+			}
+			
+			
+			
+			
+		</script>
+		
+		
+	</head>
+
+	<body  onload="cargar_datos()">
+
+		<h1>Ejercicio javascript 8: Formulario con avisos.</h1>
+		<br/><br/>
+		
+		<form>
+			<label>Nombre: </label>
+			<input id="nombre" type="text" name="form_nombre" onblur="compruebaNombre()"><div id="aviso_nombre">¡Campo obligatorio!</div>
+			
+			<br><label>Apellidos: </label>
+			<input id="apellidos" type="text" name="form_apellidos" onblur="compruebaApellidos()"><div id="aviso_apellidos">¡Campo obligatorio!</div>
+			
+			<br><label>Isla de origen: </label><select name="isla" id="islas"></select>
+			
+			<br><br>
+			<label>Fecha de Nacimiento: Día: </label><select name="dia" id="dias"></select>
+			<label>Mes: </label><select name="mes" id="meses"></select>
+			<label>Año: </label><select name="anio" id="anios"></select>
+		
+		
+		
+		</form>
+		
+		
+		
+	<br><br><h2><a href="../index.html">[Volver]</a></h2>	
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

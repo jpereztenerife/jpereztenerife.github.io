@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/ xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- 
+	Jesús M. Pérez González. 
+-->
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>Ejercicio javascript 5: Cajas informativas.</title>
+		
+		<!-- Estilos para la página -->
+		<style type="text/css">
+			body {
+				background-color:	#9593BD;
+			}
+			
+			#caja1 {
+				float: left;
+				width: 100px;
+				height: 100px;
+				background-color: green;
+				border-radius: 5px 5px 5px 5px;
+				margin-left: 25px;
+			}
+			
+			#caja2 {
+				float: left;
+				width: 100px;
+				height: 100px;
+				background-color: pink;
+				border-radius: 5px 5px 5px 5px;
+				margin-left: 25px;
+			}
+			
+			#caja3 {
+				float: left;
+				width: 100px;
+				height: 100px;
+				background-color: yellow;
+				border-radius: 5px 5px 5px 5px;
+				margin-left: 25px;
+			}
+			
+			#caja4 {
+				float: left;
+				width: 100px;
+				height: 100px;
+				background-color: brown;
+				border-radius: 5px 5px 5px 5px;
+				margin-left: 25px;
+			}
+			
+			p {
+				text-align:	center;
+				margin-left: 10px;
+				margin-right: 10px;
+				margin-top: 25px;
+			}
+			
+			
+		</style>
+		
+		
+		<script type="text/javascript">
+			var color;
+			
+			<!-- Función de prueba para borara
+			
+			function soy(caja) {
+				alert("Esta es la: " + caja.id);
+				alert("Mi clase es: " + caja.className);
+				
+				caja.style.backgroundColor = 'white';
+				alert("Ahora mi color es: " + caja.style.backgroundColor);
+				alert("Mi código HTML es: " + caja.innerHTML);
+				caja.innerHTML = "<p>Ya me has pulsado</p>";
+			}
+			
+		</script>
+		
+	</head>
+	
+	<body>
+	
+	
+	<h1>Ejercicio javascript 5: Cajas informativas.</h1>
+		<br/><br/>
+		<div id="contenido">
+			<div id="caja1" class="clase_caja1" onclick="soy(this)" ><p>La primera caja es la mejor.</p></div>
+			<div id="caja2" class="clase_caja2" onclick="soy(this)" ><p>La segunda caja puede ganar.</p></div>
+			<div id="caja3" class="clase_caja3" onclick="soy(this)" ><p>Desde el tercer puesto.</p></div>
+			<div id="caja4" class="clase_caja4" onclick="soy(this)" ><p>A la cola como siempre.</p></div>
+			</div>
+			
+			<div id="info" hidden>
+				<b><label id="lab_info"></label></b>
+			
+			</div>
+	
+	
+		
+			
+		</div>
+		
+	<br><br><br><br><br><br><h2><a href="../index.html">[Volver]</a></h2>	
+	</body>
+</html>

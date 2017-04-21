@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/ xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- 
+	Jesús M. Pérez González. 
+-->
+	<head>
+		<meta charset="UTF-8">
+		<title>Ejercicios Javascript II. 2: PhotoSlider</title>
+		
+		<!-- Código javascript -->
+		<script type="text/javascript">
+			
+			window.onload = function() {
+				muestra(0);
+			}
+			// Inicializamos variables y vectores.
+			var posicion = 0;
+			var array_fotos = [
+				"img/1-Teide.jpg",
+				"img/2-Mulhacen.jpg",
+				"img/3-Aneto.jpg",
+				"img/4-Veleta.jpg",
+				"img/5-Posets.jpg"];
+			
+			var array_nombres = [
+				"El Teide",
+				"Mulhacén",
+				"Pico del Aneto",
+				"Pico del Veleta",
+				"Pico Posets"];
+			
+			var array_datos = [
+				"<h3>1º. El Teide.</h3>Con 3718 m es el pico más alto de España y el tercer mayor volcán de la Tierra desde su base en el lecho oceánico.</h3>",
+				"<h3>2º. Mulhacén.</h3>Con 3478,6 m es el pico más alto de la península ibérica y el segundo de España. Forma parte del parque nacional de Sierra Nevada.",
+				"<h3>3º. Pico del Aneto.</h3>Con 3404 m es el pico más alto de los Pirineos. Se encuentra en el Parque Natural Posets-Maladeta, en la provincia de Huesca.",
+				"<h3>4º. Pico del Veleta.</h3>Con 3398 m es el segundo pico más alto de las Cordilleras Béticas. Está en la provincia de Granada y pertenece a Sierra Nevada.",
+				"<h3>5º. Pico Posets.</h3>Con 3375 m es el segundo pico más alto de los Pirineos tras el Aneto. Se encuentra en el norte de la provincia de Huesca."];
+			
+			
+			// Función para cambiar la imagen actual por la indicada
+			function muestra (pos) {
+				document.images.imagenactual.src = array_fotos[pos];
+				nombre.innerHTML = array_nombres[pos];
+				datos.innerHTML = array_datos[pos];
+			}
+			
+			// Función para  ir a la imágen anterior
+			function previous () {
+				if (posicion == 0) {
+					posicion = array_fotos.length - 1;
+				} else {
+					posicion--;
+				}
+				
+				muestra (posicion);
+			}
+			
+			// Función para ir a la siguiente imágen
+			function next () {
+				if (posicion == array_fotos.length - 1) {
+					posicion = 0;
+					
+				} else {
+					posicion++;
+				}
+				
+				muestra (posicion);
+			}
+			
+			// Función para ir a la primera imágen
+			function first () {
+				posicion = 0;
+				muestra (posicion);
+			}
+			
+		</script>
+		
+		<!-- Estilos para la página -->
+		<style type="text/css">
+			body {
+				background-color:	#A7D56A;
+			}
+			
+			table {
+				position:relative;
+				background-color: lightgray;
+				border: black 1px solid;
+				border-radius: 10px 10px 10px 10px;
+				width: 700px;
+				height: 180px;
+				padding-top: 10px;
+				padding-bottom: 10px;
+				padding-left: 10px;
+				padding-right: 10px;
+				margin-left: 50px;
+				text-align: center;
+			}
+			
+			table #datos {
+				background-color: lightgreen;
+				border: black 1px solid;
+				border-radius: 5px 5px 5px 5px;
+				padding-left: 10px;
+				padding-right: 10px;
+				padding-bottom: 15px;
+				margin-left: 10px;
+				margin-right: 2px;
+
+			}
+		  
+		</style>
+		
+	</head>
+
+	<body>
+
+		<h1>Ejercicios Javascript II. 2: PhotoSlider.</h1>
+		<br>
+		<h2>Los cinco picos más grandes de España.</h2>
+		
+		<table>
+			<tr>
+				<td>
+					<div id="marco">
+						<img src="" width="400" height="300" name="imagenactual">
+						<br>
+						<b><div align="center" id="nombre"></div><br></b>
+					</div>
+				</td>
+				
+				<td>
+					<div align="center" id="datos"></div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<form method="POST" name="rotater">
+						<div align="center">
+							<input type="button" value="Previous" name="prev_button" onClick="previous()"> 
+							<input type="button" value="First" name="first_button" onClick="first()"> 
+							<input type="button" value="Next" name="next_button" onClick="next()">
+						</div>
+					</form> 
+				</td>
+			</tr>
+		</table>
+		
+		
+	<br><br><h2><a href="../index.html">[Volver]</a></h2>		
+	</body>
+</html>
