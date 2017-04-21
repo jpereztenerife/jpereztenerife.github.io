@@ -1,49 +1,47 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 
-<curso nombre="DAM">
+<cursos>
+	<curso nombre="DAM">
 
-	<horas_semanales>4</horas_semanales>
+		<horas_semanales>4</horas_semanales>
 
-	<inicio>
-		<dia>15</dia>
-		<mes>09</mes>
-		<ano>2010</ano>
-	</inicio>
+		<inicio>
+			<dia>15</dia>
+			<mes>09</mes>
+			<ano>2010</ano>
+		</inicio>
 
-	<fin>
-		<dia>30</dia>
-		<mes>06</mes>
-		<ano>2011</ano>
-	<fin>
-	
-	
-	<alumnos>
-
-		<alumno>
-			<nombre>Ana</nombre>
-			<apellido1>Fernandez</apellido1>
-			<apellido2>Gutierrez</apellido2>
-			<nif>16965696L</nif>
-			<telefono>789654321</telefono>
-			<email>ana.fdezgtrrez@hotmail.com</email>
-			<direccion>C/ El Percebe, 13 de Santander CP 39302 </direccion>
-			<notas></notas>
-			<faltas></faltas>
+		<fin>
+			<dia>30</dia>
+			<mes>06</mes>
+			<ano>2011</ano>
+		</fin>
 		
-		</alumno>
-			<nombre>Pepito</nombre>
-			<apellido1>Grillo</apellido1>
-			<apellido2></apellido2>
-			<nif>98765432H</nif>
-			<telefono>656566555</telefono>
-			<email>yhyh@yahoo.com</email>
-			<direccion>Avd. El Pez, 5 de Suances CP 39401</direccion>
-			<notas>apto</notas>
-			<faltas></faltas>
+		<alumnos>
 
-	</alumnos>
-
-</curso>
-
-
-
+			<alumno>
+				<nombre>Ana</nombre>
+				<apellido1>Fernandez</apellido1>
+				<apellido2>Gutierrez</apellido2>
+				<nif>16965696L</nif>
+				<telefono>789654321</telefono>
+				<email>ana.fdezgtrrez@hotmail.com</email>
+				<direccion>C/ El Percebe, 13 de Santander CP 39302 </direccion>
+				<notas></notas>
+				<faltas></faltas>
+			</alumno>
+			
+			<alumno>
+				<nombre>Pepito</nombre>
+				<apellido1>Grillo</apellido1>
+				<apellido2></apellido2>
+				<nif>98765432H</nif>
+				<telefono>656566555</telefono>
+				<email>yhyh@yahoo.com</email>
+				<direccion>Avd. El Pez, 5 de Suances CP 39401</direccion>
+				<notas>apto</notas>
+				<faltas></faltas>
+			</alumno>
+		</alumnos>
+	</curso>
+</cursos>
