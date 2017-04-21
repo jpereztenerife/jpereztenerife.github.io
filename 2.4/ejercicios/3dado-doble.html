@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/ xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- 
+	Jesús M. Pérez González. 
+-->
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Tarea presencial Javascript II: Tirada de dos dados</title>
+		
+		<!-- Código javascript -->
+		<script type="text/javascript">
+			
+			var tiradas =0; // Para llevar la cuenta de las tiradas hechas.
+			
+			// Comprueba que se haya introducido un valor válido como apuesta.
+			// Muestra el mensaje adecuado según si falta el valor o está fuera de rango.
+			function comprueba() {
+				
+				var apu = document.getElementById("miapuesta").value;
+				if (apu == "") {
+					document.getElementById("aviso1").style.display="initial";
+					document.getElementById("aviso2").style.display="none";
+				} else if (apu <= 0 || apu >= 13) {
+					document.getElementById("aviso1").style.display="none";
+					document.getElementById("aviso2").style.display="initial";
+				}
+				
+				else {
+					document.getElementById("aviso1").style.display="none";
+					document.getElementById("aviso2").style.display="none";
+					lanzar ();
+				}
+				
+				
+				
+			}
+			
+			// tira los dados, muestra resultados
+			function lanzar (){
+				
+				var apuesta = document.getElementById("miapuesta").value;
+				
+				var tirada1 = Math.floor(Math.random() * 6) + 1;
+				var tirada2 = Math.floor(Math.random() * 6) + 1;
+				var suma = tirada1 + tirada2;
+				
+				document.images.dado1.src = "img/dado" + tirada1 + ".png";
+				document.images.dado2.src = "img/dado" + tirada2 + ".png";
+				
+				texto.innerHTML = "Has sacado un " + tirada1 + " y un " + tirada2;
+				
+				compruebaApuesta(suma,apuesta);
+			}
+			
+			// Pasa lo valores y comprueba que coincide la apuesta y el resultado y muestra mensaje
+			function compruebaApuesta (a,b) {
+				if (a == b) {
+					document.getElementById("texto2").innerHTML = "¡Has acertado!";
+				} else {
+					document.getElementById("texto2").innerHTML = "Fallo. Otra vez será.";
+				}
+				ludopatia();
+			}
+			
+			// Comprueba qsi se ha tirado los dados más de 5 veces
+			// Redirige si es positivo a www.ludopatia.org
+			function ludopatia () {
+				
+				tiradas++
+				
+				if (tiradas >=5) {
+					window.location.replace("http://www.ludopatia.org");
+				}
+				
+			}
+			
+			
+		</script>
+		
+		<!-- Estilos para la página -->
+		<style type="text/css">
+			body {
+				background-color:	#A7D56A;
+			}
+			
+			table {
+				position:relative;
+				background-color: lightgray;
+				border: black 1px solid;
+				border-radius: 10px 10px 10px 10px;
+				width: 90%;
+				height: 180px;
+				padding-top: 10px;
+				padding-bottom: 10px;
+				padding-left: 10px;
+				padding-right: 10px;
+				margin-left: 25px;
+				text-align: center;
+			}
+			
+			#aviso1, #aviso2 {
+				display: none;
+				color: darkred;
+			}
+			
+		</style>
+		
+	</head>
+
+	<body>
+
+		<div align="center"><h1>Tirada de dos dados:<br><i>Clase presencial</i> Edition.</h1></div>
+		<br/>
+		
+		<table>
+			<tr>
+				<td width =50%>
+					<form>
+						<h2>¡Prueba tu suerte!</h2>
+						<input type="button" value="¡Lanza el dado!" onClick="comprueba()"><br><br>
+						
+						Apuesta: <input id="miapuesta" type="text" name="apuesta"  size="4">
+						<br>
+						<div id="texto2"> </div>
+						<div id="aviso1">¡Campo obligatorio!</div>
+						<div id="aviso2">¡Fuera de rango!</div>
+						
+					</form>
+				</td>
+				
+				<td>
+					<img name="dado1" src="">
+					<img name="dado2" src=""><br>
+					<div id="texto"></div>
+				</td>
+			</tr>
+		
+		</table>
+		<br><br><h2><a href="../index.html">[Volver]</a></h2>	
+	</body>
+</html>
