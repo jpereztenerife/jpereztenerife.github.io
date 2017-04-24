@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ciudades>
+	<ciudad>
+		<nombre> Paris </nombre>
+		<pais continente="Europa"> Francia </pais>
+	</ciudad>
+	
+	<ciudad>
+		<nombre> El Cairo </nombre>
+		<pais continente="Africa"> Egipto </pais>
+	</ciudad>
+
+	<ciudad>
+		<nombre> Nueva Delhi </nombre>
+		<pais continente="Asia"> India </pais>
+	</ciudad>
+
+</ciudades>
