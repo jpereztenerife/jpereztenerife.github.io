@@ -1,0 +1,30 @@
+<?xmlns version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    
+        <id>https://jpereztenerife.github.io/3/atom.xml</id>
+        <title>Tiempo y noticias en Tenerife</title>
+        <link href="https://jpereztenerife.github.io"/>
+        <author><name>Jesús Pérez</name></author>
+        <updated>2017-05-01T15:28:00Z</updated>
+    
+
+    <entry>
+        <title>El tiempo en S/C de Tenerife</title>
+        <link href="http://www.eltiempo24.es/por_horas/r/Santa_Cruz_de_Tenerife-ES0ST0038.html"/>
+        <author><name>eltiempo24.es</name></author>
+        <content>Predicción para el día de hoy</content>
+        <id>http://www.eltiempo24.es/por_horas/r/Santa_Cruz_de_Tenerife-ES0ST0038.html</id>
+        <updated>2017-05-01T15:25:00Z</updated>
+    </entry>
+
+    <entry>
+        <title>Noticias de Canarias</title>
+        <link href="https://jpereztenerife.github.io/3/noticia.html"/>
+        <author><name>eltiempo24.es</name></author>
+        <content>Miles de personas se manifiestan en Canarias para exigir empleos dignos</content>
+        <id>https://jpereztenerife.github.io/3/noticia.html</id>
+        <updated>2017-05-01T15:28:00Z</updated>    
+    </entry>
+
+
+</feed>
