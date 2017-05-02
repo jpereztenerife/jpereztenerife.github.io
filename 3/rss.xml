@@ -1,0 +1,20 @@
+<rss version ="2.0">
+
+    <channel>
+        <title>RSS del tiempo en Tenerife</title>
+        <link>https://jpereztenerife.github.io</link>
+        <description>Prácticas de sindicación</description>
+        
+        <item>
+            <title>El tiempo en Santa Cruz de Tenerife</title>
+            <description>Predicción para el día de hoy</description>
+            <link>http://www.eltiempo24.es/por_horas/r/Santa_Cruz_de_Tenerife-ES0ST0038.html</link>
+        </item>
+       
+        <item>
+            <title>Noticias de Canarias</title>
+            <description>Miles de personas se manifiestan en Canarias para exigir empleos dignos</description>
+            <link>noticia.html</link>
+        </item>
+    </channel>
+</rss>
