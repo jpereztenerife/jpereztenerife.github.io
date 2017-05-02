@@ -9,12 +9,14 @@
             <title>El tiempo en S/C de Tenerife</title>
             <description>Predicción para el día de hoy</description>
             <link>http://www.eltiempo24.es/por_horas/r/Santa_Cruz_de_Tenerife-ES0ST0038.html</link>
+            <guid>http://www.eltiempo24.es/por_horas/r/Santa_Cruz_de_Tenerife-ES0ST0038.html</guid>
         </item>
        
         <item>
             <title>Noticias de Canarias</title>
             <description>Miles de personas se manifiestan en Canarias para exigir empleos dignos</description>
             <link>https://jpereztenerife.github.io/3/noticia.html</link>
+            <guid>https://jpereztenerife.github.io/3/noticia.html</guid>
         </item>
     </channel>
 </rss>
