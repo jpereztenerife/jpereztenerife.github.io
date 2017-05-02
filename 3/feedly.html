@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Capturas de Feedly</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body {
+				background-color: #7bb8ce;
+			}
+
+            a:link {
+                text-decoration: none;
+            }
+
+			nav {
+				background-color: #ffff80;
+				width: 99%;
+				border-radius: 5px 5px 5px 5px;
+			}
+
+			ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+				border-radius: 5px 0px 0px 0px;	
+			}
+
+			nav ul li {
+				float: left;
+				padding: 14px 16px 12px;
+			}
+
+			ul li:hover:not(.activo) {
+				background-color: #ff8000;
+			}
+
+			.activo {
+			background-color:#ffff80;
+			}
+
+            article {
+                background: linear-gradient(-90deg, lightgray , gray);
+                /*background-color: lightgray;*/
+				border: black 1px solid;
+				border-radius: 4px 4px 4px 4px;
+                margin-top: 25px;
+				padding-bottom: 10px;
+				padding-left: 10px;
+				padding-right: 10px;
+                width: 80%;
+                text-align: justify;
+            }
+            
+            article h2, p {
+                padding-left: 15px;
+                padding-right: 20px;
+            }
+
+
+            figure img {
+                width: 100%;
+            }
+
+            figure figcaption {
+                font-size: 12px;
+                text-align: center;
+            }
+
+			aside {
+                background-color: #ffff80;
+				width: 13%;
+				border-radius: 5px 5px 5px 5px;
+                margin-right: 5px;
+                position: absolute;
+                right:15px;
+                top: 150px;
+                align-content: alignright;
+                padding: 0px 10px 100px 5px;
+            }
+
+            aside ul {
+                padding: 0px 10px;
+                margin-top: -15px;
+            }
+
+            footer {
+                margin-top: 50px;
+                text-align: center;
+                font-style: italic;
+                bottom:0;
+                left:25%;
+            }
+
+            blockquote {
+                background-color: #ffff80;
+                font: 14px/22px sans-serif;
+                margin-top: 10px;
+                margin-bottom: 50px;
+                margin-left: 70px;
+                margin-right: 100px;
+                padding-left: 15px;
+                padding-right: 15px;
+                border: 1px solid #4b4b4b;
+                border-left: 3px solid #000000;
+            }
+
+        </style>
+    </head>
+    <body>
+        <a name="top"></a>
+        <header>
+			<h1>Capturas de Feedly</h1>
+			<nav>
+				<ul>
+					<li><a href="noticia.html">Noticias</a></li>
+					<li><a href="feeds.html">Feeds</a></li>
+					<li><a href="feedly.html">Feedly</a></li>
+					<li><a href="http://www.eltiempo24.es/por_horas/r/Santa_Cruz_de_Tenerife-ES0ST0038.html">El tiempo</a></li>
+				</ul>
+			</nav>
+		</header>
+		<section>
+
+            <article>
+                <h2>Sindicación Atom</h2>
+                <p>Utilizar Feedly para acceder a la información del canal de contenidos <a href="feeds.feedburner.com/Forges">feeds.feedburner.com/Forges</a></p> 
+                 <figure>
+                    <img src="capturas/feedly1.png" alt="Captura previa de la cuenta de Feedly">
+                    <figcaption>Captura de la cuenta de Feedly antes de agregar el canal de Forges.</figcaption>
+                </figure>
+                <hr>
+
+                <figure>
+                    <img src="capturas/feedly2.png" alt="Captura de la cuenta de Feedly en proceso">
+                    <figcaption>Captura de la cuenta de Feedly mientras agregamos el canal de Forges.</figcaption>
+                </figure>
+                <hr>
+
+                 <figure>
+                    <img src="capturas/feedly3.png" alt="Captura final de la cuenta de Feedly">
+                    <figcaption>Captura de la cuenta de Feedly una vez agregado el canal de Forges.</figcaption>
+                </figure>
+
+            </article>
+
+
+			<aside>
+				<h3>Secciones</h3>
+				<p>
+                    <ul>
+                        <li><a href="noticia.html">Noticias</a></li>
+					<li><a href="feeds.html">Feeds</a></li>
+					<li><a href="feedly.html">Feedly</a></li>
+					<li><a href="http://www.eltiempo24.es/por_horas/r/Santa_Cruz_de_Tenerife-ES0ST0038.html">El tiempo</a></li>
+                    </ul>
+                </p>
+
+				<h3>Enlaces</h3>
+				<p>
+                    <ul>
+                        <li><a href="">Inicio</a></li>
+                        <li><a href="http://www.eltiempo24.es/por_horas/r/Santa_Cruz_de_Tenerife-ES0ST0038.html">El tiempo</a></li>
+                        <li><a href="http://www.eldia.es/">El Día</a></li>
+                        <li><a href="../index.html"></a></li>
+                    </ul>
+                </p>
+
+				<h3>Sindicación</h3>
+				<p>
+                    <ul>
+                        <li><a href="rss.xml">RSS 2.0</a></li>
+                        <li><a href="https://validator.w3.org/feed/check.cgi?url=https://jpereztenerife.github.io/3/rss.xml"><img width="70" src="valid-rss.png" alt="[Valid RSS]" title="Validación RSS" /></a></li>
+                        
+                        <li><a href="atom.xml">Atom</a></li>
+                        <li><a href="https://validator.w3.org/feed/check.cgi?url=https://jpereztenerife.github.io/3/atom.xml"><img width="70" src="valid-atom.png" alt="[Valid Atom]" title="Validación Atom" /></a></li>
+                    </ul>
+                </p>
+			</aside>
+		</section>
+		<footer>
+			Noticias de Canarias. Mockup  2017, Jesús Pérez. <a href="#top">Subir.</a>
+		</footer>
+    </body>
+</html>
