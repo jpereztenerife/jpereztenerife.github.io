@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+ <pedidos xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" 
+          xsd:noNamespaceSchemaLocation="pedidos.xsd">
+
+    <pedido codigo_pedido="T6574567">
+        <sucursal>
+            <nombre_sucursal>Distanza Gran Vía</nombre_sucursal>
+            <nombre_trabajador>Marco Polo</nombre_trabajador>
+            <direccion_exposicion>Gran Vía 56</direccion_exposicion>
+            <direccion_gestion>C/ de Hortaleza 12, 3ºB</direccion_gestion>
+            <fecha>2017-05-06</fecha>
+            <plazo_revision>7</plazo_revision>
+            <observaciones>urgente</observaciones>
+        </sucursal>
+        <articulos>
+            <articulo codigo_articulo="BCH-426">
+                <numero_unidades>12</numero_unidades>
+                <precio_unidad>28,75€</precio_unidad>
+                <observaciones_articulo>Enviar unidad para exposición</observaciones_articulo>
+            </articulo>
+            <articulo codigo_articulo="CTF-664">
+                <numero_unidades>6</numero_unidades>
+                <precio_unidad>42,50€</precio_unidad>
+                <observaciones_articulo>Enviar sólo rojo</observaciones_articulo>
+            </articulo>
+            <articulo codigo_articulo="TAB-432">
+                <numero_unidades>25</numero_unidades>
+                <precio_unidad>19,80€</precio_unidad>
+                <observaciones_articulo>Enviar en toda la gama de colores</observaciones_articulo>
+            </articulo>
+            <articulo codigo_articulo="PIP-828">
+                <numero_unidades>4</numero_unidades>
+                <precio_unidad>87,50€</precio_unidad>
+                <observaciones_articulo>Recordar promoción</observaciones_articulo>
+            </articulo>
+        </articulos>
+    </pedido>
+
+    <pedido codigo_pedido="S5482873">
+        <sucursal>
+            <nombre_sucursal>Distanza Teruel</nombre_sucursal>
+            <nombre_trabajador>Pepe Botella</nombre_trabajador>
+            <direccion_exposicion>Calle del Hierro, 26</direccion_exposicion>
+            <fecha>2017-05-04</fecha>
+        </sucursal>
+        <articulos>
+            <articulo codigo_articulo="THW-445">
+                <numero_unidades>4</numero_unidades>
+                <precio_unidad>16,75€</precio_unidad>
+                <observaciones_articulo>Enviar unidad de exposición</observaciones_articulo>
+            </articulo>
+            <articulo codigo_articulo="DGT-753">
+                <numero_unidades>1</numero_unidades>
+                <precio_unidad>32,50€</precio_unidad>
+                <observaciones_articulo>Sólo si hay en negro</observaciones_articulo>
+            </articulo>
+        </articulos>
+    </pedido>
+
+</pedidos>
+
+

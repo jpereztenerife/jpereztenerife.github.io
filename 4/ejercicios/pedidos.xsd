@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd = "http://www.w3.org/2001/XMLSchema">
+    <xsd:annotation>
+        <xsd:appinfo>Validación de pedidos</xsd:appinfo>
+        <xsd:documentation xml:lang="es">
+            XSD-Schema para validar pedidos de artículos en Distanza SA.
+            <author>Jesús Pérez</author>
+            <date>2017-05-06</date>
+        </xsd:documentation>
+    </xsd:annotation>
+
+    <xsd:element name="pedidos" type="datos_pedido"/>
+
+        <xsd:complexType name="datos_pedido">
+            <xsd:sequence>
+                <xsd:element name="pedido" type="contenido_pedido" minOccurs="1" maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complexType>
+
+        <!--Definimos las secciones del pedido-->
+        <xsd:complexType name="contenido_pedido">
+            <xsd:sequence>
+                <xsd:element name="sucursal" type="datos_sucursal" minOccurs="1" maxOccurs="1" />
+                <xsd:element name="articulos" type="datos_articulos" minOccurs="1" maxOccurs="1" />
+            </xsd:sequence>
+
+            <!--Declaramos los atributos del elemento "pedido" antes de /complexType-->
+            <!--codigo_pedido formado por 8 caracteres de los cuales el primero es una letra-->
+            <xsd:attribute name="codigo_pedido" use="required">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:pattern value="[a-zA-Z][a-zA-Z0-9]{7}"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:attribute>
+
+        </xsd:complexType>
+
+
+<!--!1-->
+        <!--Definimos los datos de la sucursal-->
+        <xsd:complexType name="datos_sucursal">
+            <xsd:sequence>
+                <xsd:element name="nombre_sucursal" type="xsd:string"/>
+                <xsd:element name="nombre_trabajador" type="xsd:string"/>
+                <xsd:element name="direccion_exposicion" type="xsd:string"/>
+                <xsd:element name="direccion_gestion" type="xsd:string" minOccurs="0" maxOccurs="unbounded" />
+                <xsd:element name="fecha" type="xsd:date"/>
+
+                <xsd:element name="plazo_revision" minOccurs="0" maxOccurs="1" >
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:positiveInteger">
+                            <xsd:minInclusive value="1"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+
+                <!--Definimos elemento observaciones, restringido a "urgente" o "incompleto"-->
+                <xsd:element name="observaciones"  minOccurs="0" maxOccurs="unbounded" >
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:enumeration value="urgente"/>
+                            <xsd:enumeration value="incompleto"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+                
+<!--!2-->
+        <!--Definimos la lista de artículos pedidos-->
+        <xsd:complexType name="datos_articulos">
+                <xsd:sequence>
+                    <xsd:element name="articulo" minOccurs="1" maxOccurs="unbounded">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                    <xsd:element name="numero_unidades" type="xsd:string"/>
+                                    <xsd:element name="precio_unidad" type="xsd:string"/>
+                                    <xsd:element name="observaciones_articulo" type="xsd:string"/>
+                            </xsd:sequence>
+
+                        <!--Declaramos atributo del elemento "articulo" antes de cerrar complexType-->
+                        <!--codigo_articulo formado por "3 letras mayúsculas" "guión" "3 dígitos"-->
+                        <xsd:attribute name="codigo_articulo" use="required">
+                            <xsd:simpleType>
+                                <xsd:restriction base="xsd:string">
+                                    <xsd:pattern value="[A-Z]{3}-[0-9]{3}"/>
+                                </xsd:restriction>
+                            </xsd:simpleType>
+                        </xsd:attribute>
+                        </xsd:complexType>
+
+                    </xsd:element>
+                </xsd:sequence>
+        </xsd:complexType>
+
+</xsd:schema>
+
+

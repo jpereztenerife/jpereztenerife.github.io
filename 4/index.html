@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Ejercicios 4: Validación XML</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body {
+				background-color: #7bb8ce;
+			}
+
+            a:link {
+                text-decoration: none;
+            }
+
+			ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+				border-radius: 5px 0px 0px 0px;	
+			}
+
+			nav ul li {
+				float: left;
+				padding: 14px 16px 12px;
+			}
+
+			ul li:hover:not(.activo) {
+				background-color: #ff8000;
+			}
+
+			.activo {
+			background-color:#ffff80;
+			}
+
+            article {
+                background: linear-gradient(-90deg, lightgray , gray);
+				border: black 1px solid;
+				border-radius: 4px 4px 4px 4px;
+                margin-top: 25px;
+                margin-left: 25px;
+				padding-bottom: 10px;
+				padding-left: 10px;
+				padding-right: 10px;
+                width: 90%;
+                text-align: justify;
+            }
+            
+            article h2, p {
+                padding-left: 15px;
+            }
+
+            article h3, p {
+                padding-right: 35px;
+            }
+
+            figure img {
+                width: 100%;
+                max-width: 680px;
+            }
+
+            figure figcaption {
+                font-size: 12px;
+                text-align: center;
+            }
+
+            blockquote {
+                background-color: #ffff80;
+                font: 14px/22px sans-serif;
+                margin-top: 10px;
+                margin-bottom: 60px;
+                margin-left: 10%;
+                margin-right: 10%;
+                padding-left: 15px;
+                padding-right: 15px;
+                border: 1px solid #4b4b4b;
+                border-left: 3px solid #000000;
+            }
+            
+            footer {
+                margin-top: 50px;
+                text-align: center;
+                font-style: italic;
+                bottom:0;
+                left:25%;
+            }
+
+        </style>
+    </head>
+    <body>
+        <a name="top"></a>
+        <header>
+			<h1>Ejercicios 4: Validación XML</h1>
+		</header>
+
+		<section>
+			<article>
+                <h2>Construir:</h2>
+                <ol>
+                    <h3><li>
+                        El vocabulario para el documento XML que utiliza esta empresa para gestionar los pedidos utilizando un DTD externo.</h3>
+
+                        <figure>
+                            <img src="./images/dtd.jpg" alt="Código DTD">
+                            <figcaption>Captura con el código del archivo DTD</figcaption>
+                        </figure>
+
+                        <p></p>
+                        <blockquote>
+                            Se puede abrir el documento DTD mediante <a href="./ejercicios/pedidos.dtd">este enlace</a>.
+                        </blockquote>
+                    </li>
+                    <h3><li>
+                        Ese mismo vocabulario utilizando el lenguaje XMLSchema debidamente documentado con fecha de creación, nombre del autor y utilidad del esquema.</h3>
+
+                        <figure>
+                            <img src="./images/xsd.jpg" alt="Código XSD">
+                            <figcaption>Captura con el código del archivo XMLSchema</figcaption>
+                        </figure>
+
+                        <p></p>
+                        <blockquote>
+                            Se puede abrir el documento XSD mediante <a href="./ejercicios/pedidos.xsd">este enlace</a>.
+                        </blockquote>
+                    </li>
+                    <h3><li>
+                        Realizar un fichero XML que se corresponda con una instancia del vocabulario diseñado y asociarle al DTD.</h3>
+
+                        <figure>
+                            <img src="./images/xml-dtd.jpg" alt="Fichero XML para DTD">
+                            <figcaption>Captura con el código del archivo XML verificado con DTD</figcaption>
+                        </figure>
+
+                        <p></p>
+                        <blockquote>
+                            Se puede abrir el documento XML verificado con DTD mediante <a href="./ejercicios/xml-dtd.xml">este enlace</a>.
+                        </blockquote>
+                    </li>
+                    <h3><li>
+                        Modificar ese fichero XML para asociarle el esquema XSD diseñado.</h3>
+
+                        <figure>
+                            <img src="./images/xml-xsd.jpg" alt="Fichero XML para XSD">
+                            <figcaption>Captura con el código del archivo XML verificado con XSD</figcaption>
+                        </figure>
+
+                        <p></p>
+                        <blockquote>
+                            Se puede abrir el documento XML verificado con XSD mediante <a href="./ejercicios/xml-xsd.xml">este enlace</a>.
+                        </blockquote>
+                    </li>
+                </ol>
+                <br><hr><br>
+                <h3>Incluimos también la comprobación de formato y validación usando <i>XML Copy Editor</i></h3>
+
+                <figure>
+                    <img src="./images/validacion.jpg" alt="Validación de los ficheros">
+                    <figcaption>Capturas de la validación de los ficheros</figcaption>
+                </figure>
+
+
+                <br><br><h2><a href="../index.html">[Volver]</a></h2>
+			</article>
+			
+		</section>
+
+        
+		<footer>
+			Ejercicios de validación XML. 2017, Jesús M. Pérez. <a href="#top">Subir.</a>
+		</footer>
+    </body>
+</html>
+

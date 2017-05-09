@@ -1,0 +1,20 @@
+<!ELEMENT pedido (sucursal, articulos)>
+        <!ATTLIST pedido codigo_pedido CDATA #REQUIRED>
+        <!ATTLIST pedido observaciones (urgente | incompleto) #IMPLIED>
+    
+    <!ELEMENT sucursal (nombre_sucursal, nombre_trabajador, direccion_exposicion, direccion_gestion?, fecha, observaciones?, plazo_revision)>
+    <!ELEMENT nombre_sucursal (#PCDATA)>
+    <!ELEMENT nombre_trabajador (#PCDATA)>
+    <!ELEMENT direccion_exposicion (#PCDATA)>
+    <!ELEMENT direccion_gestion (#PCDATA)>
+    <!ELEMENT fecha (#PCDATA)>
+    <!ELEMENT plazo_revision (#PCDATA)>
+
+    <!ELEMENT articulos (articulo+)>
+    <!ELEMENT articulo (numero_unidades, precio_unidad, observaciones_articulo?)>
+        <!ATTLIST articulo codigo_articulo CDATA #REQUIRED>
+    <!ELEMENT numero_unidades (#PCDATA)>
+    <!ELEMENT precio_unidad (#PCDATA)>
+    <!ELEMENT observaciones_articulo (#PCDATA)>
+
+    
