@@ -162,6 +162,14 @@
         background-color: green;
     }
 
+    /*Estilo para el mapa*/
+    #mapa {
+        width: calc(100% - 0px);
+        height: 450px; 
+    }
+    /*Fin del estilo para el mapa*/
+
+
 /*Fin del estilo para la sección principal*/
 
 /*Estilo para el panel lateral*/
