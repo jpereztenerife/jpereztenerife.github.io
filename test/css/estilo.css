@@ -1,7 +1,8 @@
 /*Estilo general*/
     body {
         
-        background-image: url(../images/background.jpg);
+        background: url(../images/background.jpg);
+        border-radius: 4px 4px 4px 4px;
         background-repeat: repeat;
     }
 
@@ -11,30 +12,22 @@
 /*Estilo para la cabecera y el menú superior*/
     
     header {
-        height: 150px;
+        /*height: 150px;*/
         overflow: hidden;
         background-image: url(../images/header.jpg);
     }
 
     header h2 {
-        float: left;
         color: #d7ceb2;
         text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135;
-	    font: 40px 'Lobster', helvetica, arial;
+	    font: 45px 'Lobster', helvetica, arial;
         letter-spacing: 5px;
-        margin: 5px 5px 10px 25px;
+        margin: 5px 5px 0px 25px;
+        vertical-align: text-bottom;
     }
-    /*header h2 {
-        float: left;
-        margin: 15px 5px 0px 25px;
-        text-shadow: 0px 1px 1px #4d4d4d;
-        color: #ffffff;
-        font: 30px 'LeagueGothicRegular';
-    }*/
 
     header h3 {
-        position: absolute;
-        margin: 60px 0px 0px 85px;
+        margin: 0px 0px 0px 70px;
         text-shadow: 0px 1px 1px #4d4d4d, 0px 3px 3px #333;
         color: #ffffff;
         font: 15px 'Lobster', helvetica, arial;
@@ -45,7 +38,7 @@
         background-color:#dadada;
         font-family: Arial;
         border-radius: 5px 5px 5px 5px;
-        margin: 98px 5px 0px 5px;
+        margin: 22px 5px 5px 5px;
     }
 
     nav a {
@@ -105,21 +98,34 @@
         display: block;
     }
 
+    #redes {
+        text-align: right;
+        float: right;
+        overflow: hidden;
+    }
+
+    #redes img {
+        height: 18px;
+        width: 18px;
+        margin: 0px 0px 0px 0px;
+    }
+
+
 /*Fin del estilo para la cabecera y el menú superior*/
 
 /*Estilo para la sección principal*/
-    section {
+    /*section {
         
-    }
+    }*/
 
     article {
-        background: linear-gradient(-90deg, lightgray , gray);
+        background: linear-gradient(-90deg, lightgray , white);
         text-align: justify;
         border: black 1px solid;
         border-radius: 4px 4px 4px 4px;
         padding: 0px 0px 10px 10px;
         margin: 25px 0px 0px 0px;
-        width:75%;
+        width:80%;
         float: left;
 
     }
@@ -160,11 +166,13 @@
 
 /*Estilo para el pie de página*/
     footer {
-        position: absolute;
-        margin-top: 50px;
-        text-align: center;
-        font-style: italic;
-        bottom:20px;
+        bottom : 1px;  
+        height : 40px;  
+        margin-top : 40px;  
+        text-align: center;  
+        vertical-align: middle; 
+        position:fixed;
+        width:100%;
     }
 
 /*Fin del estilo para el pie de página*/
@@ -175,27 +183,29 @@
         /*El normal*/
         @media all and (max-width: 960px) {
             aside {display:block;}
-            article {width:75%;}
-            nav {margin: 98px 5px 0px 5px;}
+            article {width:76%;}
             .dropdown .dropbtn {padding: 14px 16px;}
-            header {height: 150px;}
-            header h3 {margin: 20px 0px 0px 85px;}
+            /*header {height: 150px;}
+            nav {margin: 22px 5px 0px 5px;}
+            header h3 {margin: 60px 0px 0px 85px;}*/
 
         /*Para móviles*/
-        @media all and (max-width: 540px) {
+        @media all and (max-width: 520px) {
             aside {display:none;}
             article {width:95%;}
-            nav {margin: 150px 5px 0px 5px;}
-            header h3 {margin: 70px 0px 0px 85px;}
-            header {height: 200px;}
+            nav {margin: 22px 5px 0px 5px;}
+            /*header h3 {margin: 110px 0px 0px 85px;}*/
+            /*header {height: 200px;}*/
 
         /*Para móviles 2*/
         @media all and (max-width: 430px) {
             aside {display:none;}
             article {width:95%;}
-            nav {margin: 150px 5px 0px 5px;}
+            nav {margin: 22px 5px 0px 5px;}
             .dropdown .dropbtn, nav a {padding: 10px 16px;}
-            header {height: 230px;}
-            header h3 {margin: 70px 0px 0px 85px;}
+            /*header {height: 230px;}*/
+            /*header h3 {margin: 70px 0px 0px 85px;}*/
 
-    /*Fin de estilos para adaptar el contenido a diferentes dispositivos*/
+/*Fin de estilos para adaptar el contenido a diferentes dispositivos*/
+
+    
