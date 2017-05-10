@@ -13,6 +13,7 @@
     
     header {
         /*height: 150px;*/
+        width: 100%;
         overflow: hidden;
         background-image: url(../images/header.jpg);
     }
@@ -114,51 +115,64 @@
 /*Fin del estilo para la cabecera y el menú superior*/
 
 /*Estilo para la sección principal*/
-    /*section {
-        
-    }*/
+    section {
+       width:100%;
+       background-color: yellow;
+    }
 
     article {
+        float: left;
         background: linear-gradient(-90deg, lightgray , white);
         text-align: justify;
         border: black 1px solid;
         border-radius: 4px 4px 4px 4px;
-        padding: 0px 0px 10px 10px;
+        padding: 0px 10px 10px 10px;
         margin: 25px 0px 0px 0px;
-        width:80%;
-        float: left;
+        width:74%;
+        overflow: hidden;
+    }
 
+    article #columna {
+        display: block;
+        margin: 0 4% 0 0;
+        float: left;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        display: block;
+        margin: 0 0 0 0;
+        padding: 0px 16px;
+        width: 50%;
+        background-color: blue;
     }
 
 /*Fin del estilo para la sección principal*/
 
 /*Estilo para el panel lateral*/
     aside {
+        float: right;
         background: linear-gradient(-90deg, gray, #dadada);
-        width: 15%;
-        max-width: 110px;
+        width: 110px;
         border-radius: 5px 5px 5px 5px;
         /*position: absolute;
         right:15px;
         top: 80px;*/
-        float: right;
         align-content: alignright;
-        padding: 0px 10px 150px 15px;
+        padding: 0px 0px 150px 10px;
         margin: 25px 0px 0px 5px;
     }
 
     aside ul {
-        padding: 0px 10px;
+        padding: 0px 10px 0px 5px;
         margin-top: -15px;
         list-style-type: none;
         margin: 0;
         padding: 0;
-        overflow: hidden;
         border-radius: 5px 0px 0px 0px;
     }
 
     aside ul li:hover {
-        padding: 0px 10px 0px 2px;
+        /*padding: 0px 10px 0px 2px;*/
         background-color: #f9f9f9;
     }
 
@@ -183,26 +197,33 @@
         /*El normal*/
         @media all and (max-width: 960px) {
             aside {display:block;}
-            article {width:76%;}
+            article {width:74%;}
             .dropdown .dropbtn {padding: 14px 16px;}
             /*header {height: 150px;}
             nav {margin: 22px 5px 0px 5px;}
             header h3 {margin: 60px 0px 0px 85px;}*/
 
         /*Para móviles*/
-        @media all and (max-width: 520px) {
+        @media all and (max-width: 580px) {
             aside {display:none;}
             article {width:95%;}
-            nav {margin: 22px 5px 0px 5px;}
+            nav {margin: 22px 5px 5px 5px;}
             /*header h3 {margin: 110px 0px 0px 85px;}*/
             /*header {height: 200px;}*/
+            article #columna  {
+                width: 100% !important;
+                background-color: red;
+                margin: 0 0 24px 0 !important;
+                float: none !important;
+                margin-bottom: 0 !important;
+            }
 
         /*Para móviles 2*/
-        @media all and (max-width: 430px) {
+        /*@media all and (max-width: 430px) {
             aside {display:none;}
             article {width:95%;}
-            nav {margin: 22px 5px 0px 5px;}
-            .dropdown .dropbtn, nav a {padding: 10px 16px;}
+            nav {margin: 22px 5px 5px 5px;}
+            .dropdown .dropbtn, nav a {padding: 10px 16px;}*/
             /*header {height: 230px;}*/
             /*header h3 {margin: 70px 0px 0px 85px;}*/
 
