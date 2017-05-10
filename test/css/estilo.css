@@ -8,13 +8,44 @@
 /*Fin de estilo general*/
 
 
-/*Estilo para el menú superior*/
+/*Estilo para la cabecera y el menú superior*/
+    
+    header {
+        height: 150px;
+        overflow: hidden;
+        background-image: url(../images/header.jpg);
+    }
+
+    header h2 {
+        float: left;
+        color: #d7ceb2;
+        text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135;
+	    font: 40px 'Lobster', helvetica, arial;
+        letter-spacing: 5px;
+        margin: 5px 5px 10px 25px;
+    }
+    /*header h2 {
+        float: left;
+        margin: 15px 5px 0px 25px;
+        text-shadow: 0px 1px 1px #4d4d4d;
+        color: #ffffff;
+        font: 30px 'LeagueGothicRegular';
+    }*/
+
+    header h3 {
+        position: absolute;
+        margin: 60px 0px 0px 85px;
+        text-shadow: 0px 1px 1px #4d4d4d, 0px 3px 3px #333;
+        color: #ffffff;
+        font: 15px 'Lobster', helvetica, arial;
+    }
+    
     nav {
         overflow: hidden;
         background-color:#dadada;
         font-family: Arial;
         border-radius: 5px 5px 5px 5px;
-        margin-right: 13px;
+        margin: 98px 5px 0px 5px;
     }
 
     nav a {
@@ -25,7 +56,6 @@
         padding: 14px 16px;
         text-decoration: none;
         border-radius: 4px 4px 5px 4px;
-				
     }
 
     .dropdown {
@@ -55,7 +85,7 @@
         min-width: 160px;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         z-index: 1;
-        border-radius: 4px 4px 5px 4px;
+        border-radius: 4px 4px 4px 4px;
     }
 
     .dropdown-content a {
@@ -75,19 +105,23 @@
         display: block;
     }
 
-/*Fin del estilo para el menú superior*/
+/*Fin del estilo para la cabecera y el menú superior*/
 
 /*Estilo para la sección principal*/
     section {
+        
+    }
+
+    article {
         background: linear-gradient(-90deg, lightgray , gray);
+        text-align: justify;
         border: black 1px solid;
         border-radius: 4px 4px 4px 4px;
-        margin-top: 25px;
-        padding-bottom: 10px;
-        padding-left: 10px;
-        padding-right: 10px;
-        width: 75%;
-        text-align: justify;
+        padding: 0px 0px 10px 10px;
+        margin: 25px 0px 0px 0px;
+        width:75%;
+        float: left;
+
     }
 
 /*Fin del estilo para la sección principal*/
@@ -95,15 +129,16 @@
 /*Estilo para el panel lateral*/
     aside {
         background: linear-gradient(-90deg, gray, #dadada);
-        /*background-color: #ffff80;*/
         width: 15%;
+        max-width: 110px;
         border-radius: 5px 5px 5px 5px;
-        margin-right: 5px;
-        position: absolute;
+        /*position: absolute;
         right:15px;
-        top: 80px;
+        top: 80px;*/
+        float: right;
         align-content: alignright;
-        padding: 0px 10px 100px 15px;
+        padding: 0px 10px 150px 15px;
+        margin: 25px 0px 0px 5px;
     }
 
     aside ul {
@@ -125,11 +160,42 @@
 
 /*Estilo para el pie de página*/
     footer {
+        position: absolute;
         margin-top: 50px;
         text-align: center;
         font-style: italic;
-        bottom:0;
-        left:25%;
+        bottom:20px;
     }
 
 /*Fin del estilo para el pie de página*/
+
+
+
+/*Estilos para adaptar el contenido a diferentes dispositivos*/
+        /*El normal*/
+        @media all and (max-width: 960px) {
+            aside {display:block;}
+            article {width:75%;}
+            nav {margin: 98px 5px 0px 5px;}
+            .dropdown .dropbtn {padding: 14px 16px;}
+            header {height: 150px;}
+            header h3 {margin: 20px 0px 0px 85px;}
+
+        /*Para móviles*/
+        @media all and (max-width: 540px) {
+            aside {display:none;}
+            article {width:95%;}
+            nav {margin: 150px 5px 0px 5px;}
+            header h3 {margin: 70px 0px 0px 85px;}
+            header {height: 200px;}
+
+        /*Para móviles 2*/
+        @media all and (max-width: 430px) {
+            aside {display:none;}
+            article {width:95%;}
+            nav {margin: 150px 5px 0px 5px;}
+            .dropdown .dropbtn, nav a {padding: 10px 16px;}
+            header {height: 230px;}
+            header h3 {margin: 70px 0px 0px 85px;}
+
+    /*Fin de estilos para adaptar el contenido a diferentes dispositivos*/
