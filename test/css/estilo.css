@@ -2,8 +2,8 @@
     body {
         
         background: url(../images/background.jpg);
-        border-radius: 4px 4px 4px 4px;
         background-repeat: repeat;
+        background-origin: border-box;
     }
 
 /*Fin de estilo general*/
@@ -13,9 +13,12 @@
     
     header {
         /*height: 150px;*/
-        width: 100%;
+        /*width: 100%;*/
         overflow: hidden;
         background-image: url(../images/header.jpg);
+        background-position: top center;
+        margin-left: -8px;
+        margin-right: -8px;
     }
 
     header h2 {
@@ -39,7 +42,7 @@
         background-color:#dadada;
         font-family: Arial;
         border-radius: 5px 5px 5px 5px;
-        margin: 22px 5px 5px 5px;
+        margin: 22px 8px 5px 8px;
     }
 
     nav a {
