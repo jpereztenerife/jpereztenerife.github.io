@@ -119,20 +119,23 @@
 
 /*Estilo para la sección principal*/
     section {
-       width:100%;
-       background-color: yellow;
-    }
+           width: calc(100% - 150px);
+           float: left;
+            background: -webkit-linear-gradient(left, lightgray, white);
+            background: -moz-linear-gradient(left, lightgray, white);
+            background: -o-linear-gradient(left, lightgray, white);
+            background: linear-gradient(to right, lightgray, white);
+           
+            border: black 1px solid;
+            border-radius: 4px 4px 4px 4px;
+            padding: 0px -150px 10px 10px;
+            margin: 25px -150px 0px 0px;
+            overflow: hidden;
+        }
 
     article {
-        float: left;
-        background: linear-gradient(-90deg, lightgray , white);
         text-align: justify;
-        border: black 1px solid;
-        border-radius: 4px 4px 4px 4px;
-        padding: 0px 10px 10px 10px;
-        margin: 25px 0px 0px 0px;
-        width:74%;
-        overflow: hidden;
+        padding: 0px 20px 0px 15px;
     }
 
     article #columna {
@@ -143,10 +146,20 @@
         -moz-box-sizing: border-box;
         box-sizing: border-box;
         display: block;
-        margin: 0 0 0 0;
+        margin: 0 0 15px 0;
         padding: 0px 16px;
         width: 50%;
         background-color: blue;
+    }
+
+    article #columna #izq {
+        width: 120px;
+        background-color: green;
+    }
+
+    article #columna #der {
+        width: 1200px;
+        background-color: green;
     }
 
 /*Fin del estilo para la sección principal*/
@@ -200,26 +213,27 @@
         /*El normal*/
         @media all and (max-width: 960px) {
             aside {display:block;}
-            article {width:74%;}
+            section {
+                width: calc(100% - 150px);
+                padding: 0px -150px 10px 10px;
+                margin: 25px -150px 0px 0px;
+            
+            }
             .dropdown .dropbtn {padding: 14px 16px;}
-            /*header {height: 150px;}
-            nav {margin: 22px 5px 0px 5px;}
-            header h3 {margin: 60px 0px 0px 85px;}*/
-
+        }
         /*Para móviles*/
         @media all and (max-width: 580px) {
             aside {display:none;}
-            article {width:95%;}
-            nav {margin: 22px 5px 5px 5px;}
-            /*header h3 {margin: 110px 0px 0px 85px;}*/
-            /*header {height: 200px;}*/
-            article #columna  {
-                width: 100% !important;
-                background-color: red;
-                margin: 0 0 24px 0 !important;
-                float: none !important;
-                margin-bottom: 0 !important;
+            /*article {width:96%; margin: 25px 0 15px 0;}*/
+            section {
+                width:100%;
+                padding: 0px -150px 10px 10px;
+                margin: 25px -150px 0px 0px;
+            
             }
+            nav {margin: 22px 8px 5px 8px;}
+            
+        }
 
         /*Para móviles 2*/
         /*@media all and (max-width: 430px) {
@@ -232,4 +246,19 @@
 
 /*Fin de estilos para adaptar el contenido a diferentes dispositivos*/
 
-    
+ /*Estilos para el div columna adaptativo */
+
+        @media all and (max-width: 1000px) {
+            article #columna  {
+                padding: 0px 30px;
+                width: 100% !important;
+                background-color: red;
+                margin: 0 0px 15px 0px !important;
+                margin: 0 0% 0 0;
+                float: none !important;
+                /*margin-bottom: 0 !important;*/
+                
+            }
+        }
+
+ /*Fin de estilos para el div columna adaptativo*/
