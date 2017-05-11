@@ -190,12 +190,12 @@
         }
         
         article #columna p {
-            padding: 5px 5px 5px 0px;
+            padding: 5px 25px 5px 0px;
         }
 
         article #columna table {
             /*background-color: #00ffff;*/
-            width: calc(100% - 0px);
+            width: calc(100% - 25px);
             border-collapse: collapse;
             border-top: 2px solid grey;
             border-bottom: 2px solid grey;
@@ -370,6 +370,7 @@
             }
             nav {margin: 22px 8px 5px 8px;}
             
+            
         }
 
         /*Para móviles 2*/
@@ -394,6 +395,14 @@
                 float: none !important;
                 margin-bottom: 0 !important;
                 
+            }
+
+            article #columna p {
+                padding: 5px 5px 5px 0px;
+            }
+
+            article #columna table {
+                width: calc(100% - 0px);
             }
         }
 
