@@ -140,14 +140,14 @@
             border: black 1px solid;
             border-radius: 4px 4px 4px 4px;
             padding: 0px -150px 10px 10px;
-            margin: 25px -150px 0px 0px;
+            margin: 15px -150px 0px 0px;
             overflow: hidden;
         }
 
     article {
         text-align: justify;
         padding: 0px 20px 50px 15px;
-        border: red 0px solid;
+        /*border: red 0px solid;*/
         font-family: Garamond,Baskerville,Baskerville Old Face,Hoefler Text,Times New Roman,serif;
         font-weight: 500;
         line-height: 25.4px;
@@ -177,8 +177,6 @@
 
     
     section article video {
-        position: relative;
-        up: 25px;
         width: 100%;
         padding-top: 20px;
         text-align: left;
@@ -194,8 +192,8 @@
             display: block;
             margin: 0px 4% 0 0;
             float: left;
-            margin: 0 0 15px 0;
-            padding: 0px 0px 0px 0px;
+            margin: 0 0 10px 0;
+            padding: 0px 0px 0 0px;
             width: 50%;
             /*background-color: blue;*/
         }
@@ -271,9 +269,6 @@
         background: linear-gradient(-90deg, gray, #dadada);
         width: 115px;
         border-radius: 5px 5px 5px 5px;
-        /*position: absolute;
-        right:15px;
-        top: 80px;*/
         align-content: alignright;
         padding: 0px 0px 150px 10px;
         margin: 25px 5px 0px 5px;
@@ -294,7 +289,6 @@
     aside hr {
         width: 90px;
         position: relative;
-        /*top: -6px;*/
         left: -3px;
     }
 
@@ -335,22 +329,18 @@
 /*Fin del estilo para el panel lateral*/
 
 /*Estilo para el pie de página*/
-    footer {
-        bottom : 1px;  
-        height : 30px;  
-        margin-top : 50px;  
+    footer { 
+        height : 25px;  
+        margin-top : 40px;
+        padding-top: 5px;
         text-align: center;  
         vertical-align: middle; 
-        position:relative;
         width:100%;
+        font-family: Baskerville,Baskerville Old Face,Hoefler Text,Garamond,Times New Roman,serif;
+        font-size: 16px;
+        font-weight: unset;
     }
-    /*footer {
-        margin-top: 50px;
-                text-align: center;
-                font-style: italic;
-                bottom:0;
-                left:25%;
-    }*/
+
 /*Fin del estilo para el pie de página*/
 
 
@@ -383,7 +373,6 @@
         /*Para móviles*/
         @media all and (max-width: 580px) {
             aside {display:none;}
-            /*article {width:96%; margin: 25px 0 15px 0;}*/
             section {
                 width: calc(100% - 10px);
                 padding: 0px -150px 10px 10px;
@@ -395,24 +384,19 @@
             
         }
 
-        /*Para móviles 2*/
-        /*@media all and (max-width: 430px) {
-            aside {display:none;}
-            article {width:95%;}
-            nav {margin: 22px 5px 5px 5px;}
-            .dropdown .dropbtn, nav a {padding: 10px 16px;}*/
-            /*header {height: 230px;}*/
-            /*header h3 {margin: 70px 0px 0px 85px;}*/
-
 /*Fin de estilos para adaptar el contenido a diferentes dispositivos*/
 
  /*Estilos para el div columna adaptativo */
 
         @media all and (max-width: 1000px) {
+            article {
+                padding-bottom: 20px;
+            }
+
             article #columna  {
-                width: 100% !important;
+                width: 100%;
                 /*background-color: red;*/
-                margin: 0 0px 15px 0px !important;
+                margin: 0 0px 15px 0px;
                 margin: 0 0% 0 0;
                 float: left !important;
                 margin-bottom: 0 !important;
