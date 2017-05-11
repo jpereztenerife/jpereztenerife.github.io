@@ -319,6 +319,14 @@
                 margin-bottom: 0 !important;
                 
             }
+
+            article #columna p {
+                padding: 5px 5px 5px 0px;
+            }
+
+            article #columna table {
+                width: calc(100% - 0px);
+            }
         }
 
  /*Fin de estilos para el div columna adaptativo*/
