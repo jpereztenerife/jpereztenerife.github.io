@@ -154,6 +154,14 @@
         font-size: 20px;
     }
 
+/*Estilos del reproductor de audio*/
+    section article audio {
+        width: 100%;
+        padding-bottom: 15px;
+    }
+
+/*Fin de estilos del reproductor de audio*/
+
 
     /*Estilo para la sección dónde estamos */
         article #columna {
