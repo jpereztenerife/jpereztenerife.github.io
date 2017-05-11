@@ -1,0 +1,62 @@
+/*Estilo para la sección dónde estamos */
+    article #columna {
+        display: block;
+        margin: 0px 4% 0 0;
+        float: left;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        display: block;
+        margin: 0 0 15px 0;
+        padding: 0px 0px 0px 0px;
+        width: 50%;
+        /*background-color: blue;*/
+    }
+    
+    article #columna p {
+        padding: 5px 5px 5px 5px;
+    }
+
+    article #columna table {
+        /*background-color: #00ffff;*/
+        width: calc(100% - 0px);
+        border-collapse: collapse;
+        border-top: 2px solid grey;
+        border-bottom: 2px solid grey;
+    }
+
+
+    article #columna table tr {
+        border-collapse: collapse;
+        border-bottom: 2px solid grey;
+    }
+
+    article #columna #izq {
+        text-align: center;
+        float: left;
+        width: 40px;
+        height: 40px;
+        /*background-color: green;*/
+        position: relative;
+        top: 10px;
+    }
+
+    article #columna #der {
+        height: 40px;
+        text-align: left;
+        float: left;
+        margin: 0 -50px 0 5px;
+        padding: 0px -1px 0px 15px;
+        /*background-color: green;*/
+        width: calc(100% - 50px);
+        position: relative;
+        top: 10px;
+    }
+
+    /*Estilo para el mapa*/
+    #mapa {
+        width: calc(100% - 0px);
+        height: 450px; 
+    }
+    /*Fin del estilo para el mapa*/
+/*Estilo para la sección dónde estamos */
