@@ -154,11 +154,21 @@
         font-size: 20px;
     }
 
-/*Estilos del reproductor de audio*/
+/*Estilos del reproductor de audio/video*/
     section article audio {
         width: 100%;
         padding-bottom: 15px;
+    }
+
+    
+    section article video {
+        width: 100%;
+        padding-top: 20px;
+    }
+
+    section article #titulo {
         text-align: left;
+        background-color: red;
     }
 
 
