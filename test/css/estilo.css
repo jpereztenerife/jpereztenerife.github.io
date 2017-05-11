@@ -232,6 +232,11 @@
         article #columna #der a {
             overflow: hidden;
             color: black;
+            text-decoration: none;
+        }
+        article #columna #der a:hover {
+            overflow: hidden;
+            color: red;
         }
 
         /*Estilo para el mapa*/
