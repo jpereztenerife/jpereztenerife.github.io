@@ -158,7 +158,9 @@
     section article audio {
         width: 100%;
         padding-bottom: 15px;
+        text-align: left;
     }
+
 
 /*Fin de estilos del reproductor de audio*/
 
