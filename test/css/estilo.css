@@ -172,10 +172,9 @@
     }
 
 
-/*Fin de estilos del reproductor de audio*/
+/*Fin de estilos del reproductor de audio/video*/
 
-
-    /*Estilo para la sección dónde estamos */
+/*Estilo para la sección dónde estamos */
         article #columna {
             display: block;
             margin: 0px 4% 0 0;
@@ -240,7 +239,7 @@
             height: 450px; 
         }
         /*Fin del estilo para el mapa*/
-    /*Fin de estilo para la sección dónde estamos */
+/*Fin de estilo para la sección dónde estamos */
 
 /*Fin del estilo para la sección principal*/
 
@@ -255,20 +254,29 @@
         top: 80px;*/
         align-content: alignright;
         padding: 0px 0px 150px 10px;
-        margin: 25px 0px 0px 5px;
+        margin: 25px 5px 0px 5px;
+        font-family: Franklin Gothic Medium,Franklin Gothic,ITC Franklin Gothic,Arial,sans-serif;
+    }
+    aside link {
+        text-decoration: none;
     }
 
     aside ul {
         padding: 0px 10px 0px 5px;
         margin-top: -15px;
         list-style-type: none;
-        margin: 0;
+        margin: -10px 0 0 0;
         padding: 0;
         border-radius: 5px 0px 0px 0px;
     }
 
+    aside ul li {
+        height: 30px;
+        margin: 0px 20px 0 10px;
+    }
+
     aside ul li:hover {
-        /*padding: 0px 10px 0px 2px;*/
+        padding: 0px 10px 0px 2px;
         background-color: #f9f9f9;
     }
 
