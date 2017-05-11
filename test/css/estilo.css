@@ -58,6 +58,7 @@
         padding: 14px 16px;
         text-decoration: none;
         border-radius: 4px 4px 5px 4px;
+        /*background-color: red;*/
     }
 
     .dropdown {
@@ -121,7 +122,6 @@
     #redes img {
         height: 24px;
         width: 24px;
-        margin: 0px 0px 0px 0px;
     }
 
 
@@ -247,7 +247,7 @@
     aside {
         float: right;
         background: linear-gradient(-90deg, gray, #dadada);
-        width: 110px;
+        width: 115px;
         border-radius: 5px 5px 5px 5px;
         /*position: absolute;
         right:15px;
@@ -255,24 +255,54 @@
         align-content: alignright;
         padding: 0px 0px 150px 10px;
         margin: 25px 5px 0px 5px;
-        font-family: Franklin Gothic Medium,Franklin Gothic,ITC Franklin Gothic,Arial,sans-serif;
+        font-family: Book Antiqua,Palatino,Palatino Linotype,Palatino LT STD,Georgia,serif;
+        font-weight: 800;
+        font-size: 14px;
+        height: 320px;
     }
+
+    aside h3 {
+        font-size: 19px;
+    }
+
     aside link {
         text-decoration: none;
     }
 
+    aside hr {
+        width: 90px;
+        position: relative;
+        /*top: -6px;*/
+        left: -3px;
+    }
+
     aside ul {
-        padding: 0px 10px 0px 5px;
-        margin-top: -15px;
+        margin-top: -25px;
         list-style-type: none;
-        margin: -10px 0 0 0;
+        margin: -15px 0 0 -10px;
         padding: 0;
         border-radius: 5px 0px 0px 0px;
     }
 
     aside ul li {
         height: 30px;
-        margin: 0px 20px 0 10px;
+        border-radius: 4px 4px 4px 4px;
+        padding: 0 0 0 -5px;
+        overflow: hidden;
+    }
+
+    aside ul li a {
+        width: 100%;
+        margin: 0px 10px 0 20px;
+        position: relative;
+        top: 6px;
+        left: -40px;
+        text-decoration: none;
+        border-radius: 4px 4px 4px 4px;
+        padding: 20px 70px 20px 40px;
+        overflow: hidden;
+        color: black;
+        /*background-color: red;*/
     }
 
     aside ul li:hover {
