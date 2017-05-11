@@ -209,6 +209,9 @@
             width: calc(100% - 50px);
             position: relative;
             top: 10px;
+            font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
+            font-size: 16px;
+            font-weight: 700;
         }
 
         /*Estilo para el mapa*/
