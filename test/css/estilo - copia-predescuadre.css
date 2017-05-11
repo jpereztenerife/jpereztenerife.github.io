@@ -1,0 +1,415 @@
+/*Estilo general*/
+    body {
+        
+        background: url(../images/background.jpg);
+        background-repeat: repeat;
+        background-origin: border-box;
+    }
+
+/*Fin de estilo general*/
+
+
+/*Estilo para la cabecera y el menú superior*/
+    
+    header {
+        /*height: 150px;*/
+        /*width: 100%;*/
+        overflow: hidden;
+        background-image: url(../images/header.jpg);
+        background-position: top center;
+        margin-left: -8px;
+        margin-right: -8px;
+    }
+
+    header h2 {
+        color: #d7ceb2;
+        text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135;
+	    font: 45px 'Lobster', helvetica, arial;
+        letter-spacing: 5px;
+        margin: 5px 5px 0px 25px;
+        vertical-align: text-bottom;
+    }
+
+    header h3 {
+        margin: 0px 0px 0px 70px;
+        text-shadow: 0px 1px 1px #4d4d4d, 0px 3px 3px #333;
+        color: #ffffff;
+        font: 15px 'Lobster', helvetica, arial;
+    }
+    
+    nav {
+        overflow: hidden;
+        background-color:#dadada;
+        /*font-family: Arial;*/
+        
+        font-family: Garamond,Baskerville,Baskerville Old Face,Hoefler Text,Times New Roman,serif;
+        font-weight: 800;
+        line-height: 25.4px;
+        font-size: 18px;
+        border-radius: 4px 4px 5px 4px;
+        margin: 22px 8px 5px 8px;
+    }
+
+    nav a {
+        float: left;
+        font-size: 16px;
+        color: black;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        border-radius: 4px 4px 5px 4px;
+        /*background-color: red;*/
+    }
+
+    .dropdown {
+        float: left;
+        overflow: hidden;
+        font-weight: 800;
+    }
+
+    .dropdown .dropbtn {
+        font-size: 16px;    
+        border: none;
+        outline: none;
+        color: black;
+        padding: 14px 16px;
+        background-color: inherit;
+        border-radius: 4px 4px 5px 4px;
+        font-family: Garamond,Baskerville,Baskerville Old Face,Hoefler Text,Times New Roman,serif;
+        font-weight: 800;
+        line-height: 25.4px;
+        font-size: 18px;
+    }
+
+    nav a:hover, .dropdown:hover .dropbtn {
+        background-color: #f9f9f9;
+        border-radius: 4px 4px 4px 4px;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        border-radius: 4px 4px 4px 4px;
+    }
+
+    .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    #redes {
+        text-align: right;
+        float: right;
+        overflow: hidden;
+    }
+
+    #redes img {
+        height: 24px;
+        width: 24px;
+    }
+
+
+
+/*Fin del estilo para la cabecera y el menú superior*/
+
+/*Estilo para la sección principal*/
+    section {
+           width: calc(100% - 150px);
+           float: left;
+            background: -webkit-linear-gradient(left, lightgray, white);
+            background: -moz-linear-gradient(left, lightgray, white);
+            background: -o-linear-gradient(left, lightgray, white);
+            background: linear-gradient(to right, lightgray, white);
+           
+            border: black 1px solid;
+            border-radius: 4px 4px 4px 4px;
+            padding: 0px -150px 10px 10px;
+            margin: 15px -150px 0px 0px;
+            overflow: hidden;
+        }
+
+    article {
+        text-align: justify;
+        padding: 0px 20px 50px 15px;
+        /*border: red 0px solid;*/
+        font-family: Garamond,Baskerville,Baskerville Old Face,Hoefler Text,Times New Roman,serif;
+        font-weight: 500;
+        line-height: 25.4px;
+        font-size: 20px;
+    }
+
+/*Estilos del reproductor de audio/video*/
+    
+    /*El título de las canciones*/
+    section article #titulo {
+        width: calc(100% - 15px);
+        border: #808080 1px solid;
+        border-bottom: 0px;
+        margin-top: 15px;
+        text-align: left;
+        background-color: darkgrey;
+        padding: 0 0 0 15px;
+    }
+    
+    
+    section article audio {
+        /*border: red 1px solid;*/
+        width: 100%;
+        border: #808080 1px solid;
+        border-top: 0px;
+    }
+
+    
+    section article video {
+        width: 100%;
+        padding-top: 20px;
+        text-align: left;
+    }
+
+    
+
+
+/*Fin de estilos del reproductor de audio/video*/
+
+/*Estilo para la sección dónde estamos */
+        article #columna {
+            display: block;
+            margin: 0px 4% 0 0;
+            float: left;
+            margin: 0 0 10px 0;
+            padding: 0px 0px 0 0px;
+            width: 50%;
+            /*background-color: blue;*/
+        }
+        
+        article #columna p {
+            padding: 5px 25px 5px 0px;
+        }
+
+        article #columna table {
+            /*background-color: #00ffff;*/
+            width: calc(100% - 25px);
+            border-collapse: collapse;
+            border-top: 2px solid grey;
+            border-bottom: 2px solid grey;
+            padding-right: 55px;
+        }
+
+
+        article #columna table tr {
+            border-collapse: collapse;
+            border-bottom: 2px solid grey;
+        }
+
+        article #columna #izq {
+            text-align: center;
+            float: left;
+            width: 40px;
+            height: 40px;
+            /*background-color: green;*/
+            position: relative;
+            top: 10px;
+        }
+
+        article #columna #der {
+            height: 40px;
+            text-align: left;
+            float: left;
+            margin: 0 -50px 0 5px;
+            padding: 0px -1px 0px 15px;
+            /*background-color: green;*/
+            width: calc(100% - 50px);
+            position: relative;
+            top: 10px;
+            font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        article #columna #der a {
+            overflow: hidden;
+            color: black;
+            text-decoration: none;
+        }
+        article #columna #der a:hover {
+            overflow: hidden;
+            color: red;
+        }
+
+        /*Estilo para el mapa*/
+        #mapa {
+            width: calc(100% - 0px);
+            height: 450px; 
+        }
+
+        /*Fin del estilo para el mapa*/
+/*Fin de estilo para la sección dónde estamos */
+
+/*Fin del estilo para la sección principal*/
+
+/*Estilo para el panel lateral*/
+    aside {
+        float: right;
+        background: linear-gradient(-90deg, gray, #dadada);
+        width: 115px;
+        border-radius: 5px 5px 5px 5px;
+        align-content: alignright;
+        padding: 0px 0px 150px 10px;
+        margin: 25px 5px 0px 5px;
+        font-family: Book Antiqua,Palatino,Palatino Linotype,Palatino LT STD,Georgia,serif;
+        font-weight: 800;
+        font-size: 14px;
+        height: 320px;
+    }
+
+    aside h3 {
+        font-size: 19px;
+    }
+
+    aside link {
+        text-decoration: none;
+    }
+
+    aside hr {
+        width: 90px;
+        position: relative;
+        left: -3px;
+    }
+
+    aside ul {
+        margin-top: -25px;
+        list-style-type: none;
+        margin: -15px 0 0 -10px;
+        padding: 0;
+        border-radius: 5px 0px 0px 0px;
+    }
+
+    aside ul li {
+        height: 30px;
+        border-radius: 4px 4px 4px 4px;
+        padding: 0 0 0 -5px;
+        overflow: hidden;
+    }
+
+    aside ul li a {
+        width: 100%;
+        margin: 0px 10px 0 20px;
+        position: relative;
+        top: 6px;
+        left: -40px;
+        text-decoration: none;
+        border-radius: 4px 4px 4px 4px;
+        padding: 20px 70px 20px 40px;
+        overflow: hidden;
+        color: black;
+        /*background-color: red;*/
+    }
+
+    aside ul li:hover {
+        padding: 0px 10px 0px 2px;
+        background-color: #f9f9f9;
+    }
+
+/*Fin del estilo para el panel lateral*/
+
+/*Estilo para el pie de página*/
+    footer { 
+        height : 25px;  
+        margin-top : 40px;
+        padding-top: 5px;
+        text-align: center;  
+        vertical-align: middle; 
+        width:100%;
+        font-family: Baskerville,Baskerville Old Face,Hoefler Text,Garamond,Times New Roman,serif;
+        font-size: 16px;
+        font-weight: unset;
+    }
+
+/*Fin del estilo para el pie de página*/
+
+
+
+/*Estilos para adaptar el contenido a diferentes dispositivos*/
+        /*El normal*/
+        @media all and (max-width: 960px) {
+            aside {display:block;}
+            section {
+                width: calc(100% - 150px);
+                padding: 0px 0px 10px 10px;
+                margin: 25px 0px 0px 0px;
+            
+            }
+            article #column {
+                width: 100%;
+            }
+            
+            article #columna #der {
+                height: 40px;
+                text-align: left;
+                float: left;
+                padding: 0px -1px 0px 15px;
+                margin: 0 -50px 0 5px;
+                /*background-color: rebeccapurple;*/
+            }   
+
+            .dropdown .dropbtn {padding: 14px 16px;}
+        }
+        /*Para móviles*/
+        @media all and (max-width: 580px) {
+            aside {display:none;}
+            section {
+                width: calc(100% - 10px);
+                padding: 0px -150px 10px 10px;
+                margin: 25px -150px 0px 0px;
+            
+            }
+            nav {margin: 22px 8px 5px 8px;}
+            
+            
+        }
+
+/*Fin de estilos para adaptar el contenido a diferentes dispositivos*/
+
+ /*Estilos para el div columna adaptativo */
+
+        @media all and (max-width: 1000px) {
+            article {
+                padding-bottom: 20px;
+            }
+
+            article #columna  {
+                width: 100%;
+                /*background-color: red;*/
+                margin: 0 0px 15px 0px;
+                margin: 0 0% 0 0;
+                float: left !important;
+                margin-bottom: 0 !important;
+                
+            }
+
+            article #columna p {
+                padding: 5px 5px 5px 0px;
+            }
+
+            article #columna table {
+                width: calc(100% - 0px);
+            }
+        }
+
+ /*Fin de estilos para el div columna adaptativo*/
