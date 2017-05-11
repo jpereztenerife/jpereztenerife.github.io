@@ -155,21 +155,36 @@
     }
 
 /*Estilos del reproductor de audio/video*/
+    
+    /*El título de las canciones*/
+    section article #titulo {
+        width: calc(100% - 15px);
+        border: #808080 1px solid;
+        border-bottom: 0px;
+        margin-top: 15px;
+        text-align: left;
+        background-color: darkgrey;
+        padding: 0 0 0 15px;
+    }
+    
+    
     section article audio {
+        /*border: red 1px solid;*/
         width: 100%;
-        padding-bottom: 15px;
+        border: #808080 1px solid;
+        border-top: 0px;
     }
 
     
     section article video {
+        position: relative;
+        up: 25px;
         width: 100%;
         padding-top: 20px;
+        text-align: left;
     }
 
-    section article #titulo {
-        text-align: left;
-        background-color: red;
-    }
+    
 
 
 /*Fin de estilos del reproductor de audio/video*/
