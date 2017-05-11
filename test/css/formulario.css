@@ -1,0 +1,105 @@
+
+.formulario {
+    margin:10px auto;
+    max-width: 800px;
+    padding: 20px 0px 10px 0px;
+    font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+.formulario li {
+    padding: 0;
+    display: block;
+    list-style: none;
+    margin: 10px 0 0 0;
+}
+.formulario label{
+    margin:15px 0 3px 0;
+    padding:0px;
+    display:block;
+    font-weight: bold;
+}
+.formulario input[type=text],
+.formulario input[type=date],
+.formulario input[type=datetime],
+.formulario input[type=number],
+.formulario input[type=search],
+.formulario input[type=time],
+.formulario input[type=url],
+.formulario input[type=email],
+textarea,
+select{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border:1px solid #a2a2a2;
+    padding: 7px;
+    margin:0px;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none; 
+}
+.formulario input[type=text]:focus,
+.formulario input[type=date]:focus,
+.formulario input[type=datetime]:focus,
+.formulario input[type=number]:focus,
+.formulario input[type=search]:focus,
+.formulario input[type=time]:focus,
+.formulario input[type=url]:focus,
+.formulario input[type=email]:focus,
+.formulario textarea:focus,
+.formulario select:focus{
+    -moz-box-shadow: 0 0 8px #88D5E9;
+    -webkit-box-shadow: 0 0 8px #88D5E9;
+    box-shadow: 0 0 8px #88D5E9;
+    border: 1px solid #88D5E9;
+}
+.formulario .field-divided{
+    width: 48%;
+    height: 32px;
+}
+
+.formulario .field-date{
+    width: 48%;
+    height: 32px;
+}
+
+.formulario .field-date:focus{
+    -moz-box-shadow: 0 0 8px #88D5E9;
+    -webkit-box-shadow: 0 0 8px #88D5E9;
+    box-shadow: 0 0 8px #88D5E9;
+    border: 1px solid #88D5E9;
+}
+
+
+.formulario .field-long{
+    width: 100%;
+}
+.formulario .field-select{
+    width: 100%;
+}
+.formulario .field-textarea{
+    height: 200px;
+}
+.formulario input[type=submit], .formulario input[type=button]{
+    background: #454545;
+    padding: 8px 15px 8px 15px;
+    margin: 0px 0px 10px 0px;
+    border: none;
+    color: #fff;
+    position: relative;
+        text-align: center;  
+        vertical-align: middle; 
+        position:relative;
+        width:100%;
+
+}
+.formulario input[type=submit]:hover, .formulario input[type=button]:hover{
+    background: #808080;
+    box-shadow:none;
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+}
+.formulario .required{
+    color:red;
+}

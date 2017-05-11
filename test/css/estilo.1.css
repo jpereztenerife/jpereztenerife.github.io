@@ -40,13 +40,8 @@
     nav {
         overflow: hidden;
         background-color:#dadada;
-        /*font-family: Arial;*/
-        
-        font-family: Garamond,Baskerville,Baskerville Old Face,Hoefler Text,Times New Roman,serif;
-        font-weight: 800;
-        line-height: 25.4px;
-        font-size: 18px;
-        border-radius: 4px 4px 5px 4px;
+        font-family: Arial;
+        border-radius: 5px 5px 5px 5px;
         margin: 22px 8px 5px 8px;
     }
 
@@ -63,7 +58,6 @@
     .dropdown {
         float: left;
         overflow: hidden;
-        font-weight: 800;
     }
 
     .dropdown .dropbtn {
@@ -74,10 +68,6 @@
         padding: 14px 16px;
         background-color: inherit;
         border-radius: 4px 4px 5px 4px;
-        font-family: Garamond,Baskerville,Baskerville Old Face,Hoefler Text,Times New Roman,serif;
-        font-weight: 800;
-        line-height: 25.4px;
-        font-size: 18px;
     }
 
     nav a:hover, .dropdown:hover .dropbtn {
@@ -119,8 +109,8 @@
     }
 
     #redes img {
-        height: 24px;
-        width: 24px;
+        height: 18px;
+        width: 18px;
         margin: 0px 0px 0px 0px;
     }
 
@@ -148,76 +138,71 @@
         text-align: justify;
         padding: 0px 20px 50px 15px;
         border: red 0px solid;
-        font-family: Garamond,Baskerville,Baskerville Old Face,Hoefler Text,Times New Roman,serif;
-        font-weight: 500;
-        line-height: 25.4px;
-        font-size: 20px;
     }
 
 
-    /*Estilo para la sección dónde estamos */
-        article #columna {
-            display: block;
-            margin: 0px 4% 0 0;
-            float: left;
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
-            display: block;
-            margin: 0 0 15px 0;
-            padding: 0px 0px 0px 0px;
-            width: 50%;
-            /*background-color: blue;*/
-        }
-        
-        article #columna p {
-            padding: 5px 5px 5px 0px;
-        }
+/*Estilo para la sección dónde estamos */
+    article #columna {
+        display: block;
+        margin: 0px 4% 0 0;
+        float: left;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        display: block;
+        margin: 0 0 15px 0;
+        padding: 0px 0px 0px 0px;
+        width: 50%;
+        /*background-color: blue;*/
+    }
+    
+    article #columna p {
+        padding: 5px 5px 5px 5px;
+    }
 
-        article #columna table {
-            /*background-color: #00ffff;*/
-            width: calc(100% - 0px);
-            border-collapse: collapse;
-            border-top: 2px solid grey;
-            border-bottom: 2px solid grey;
-            padding-right: 55px;
-        }
+    article #columna table {
+        /*background-color: #00ffff;*/
+        width: calc(100% - 0px);
+        border-collapse: collapse;
+        border-top: 2px solid grey;
+        border-bottom: 2px solid grey;
+    }
 
 
-        article #columna table tr {
-            border-collapse: collapse;
-            border-bottom: 2px solid grey;
-        }
+    article #columna table tr {
+        border-collapse: collapse;
+        border-bottom: 2px solid grey;
+    }
 
-        article #columna #izq {
-            text-align: center;
-            float: left;
-            width: 40px;
-            height: 40px;
-            /*background-color: green;*/
-            position: relative;
-            top: 10px;
-        }
+    article #columna #izq {
+        text-align: center;
+        float: left;
+        width: 40px;
+        height: 40px;
+        /*background-color: green;*/
+        position: relative;
+        top: 10px;
+    }
 
-        article #columna #der {
-            height: 40px;
-            text-align: left;
-            float: left;
-            margin: 0 -50px 0 5px;
-            padding: 0px -1px 0px 15px;
-            /*background-color: green;*/
-            width: calc(100% - 50px);
-            position: relative;
-            top: 10px;
-        }
+    article #columna #der {
+        height: 40px;
+        text-align: left;
+        float: left;
+        margin: 0 -50px 0 5px;
+        padding: 0px -1px 0px 15px;
+        /*background-color: green;*/
+        width: calc(100% - 50px);
+        position: relative;
+        top: 10px;
+    }
 
-        /*Estilo para el mapa*/
-        #mapa {
-            width: calc(100% - 0px);
-            height: 450px; 
-        }
-        /*Fin del estilo para el mapa*/
-    /*Fin de estilo para la sección dónde estamos */
+    /*Estilo para el mapa*/
+    #mapa {
+        width: calc(100% - 0px);
+        height: 450px; 
+    }
+    /*Fin del estilo para el mapa*/
+/*Estilo para la sección dónde estamos */
 
 /*Fin del estilo para la sección principal*/
 
