@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Ejercicio 5: XSLT y XPath</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body {
+				background-color: #7bb8ce;
+			}
+
+            article {
+                background: linear-gradient(-90deg, lightgray , gray);
+				border: black 1px solid;
+				border-radius: 4px 4px 4px 4px;
+                margin-top: 25px;
+                margin-left: 5px;
+                margin-right: 5px;
+				padding-bottom: 10px;
+				padding-left: 10px;
+				padding-right: 10px;
+                text-align: justify;
+                
+            }
+            
+            article h2, p {
+                padding-left: 15px;
+            }
+
+            article h3 {
+                padding-left: 20px;
+            }
+
+            figure img {
+                position: relative;
+                width: 100%;
+                max-width: 685px;
+                display: block;
+                border: 1px solid black;
+                border-top: 10px solid #1E1E1E;
+
+            }
+            figure .tabla{
+                max-width: 515px;
+                border-top: 0px solid #1E1E1E;
+            }
+
+            figure figcaption {
+                font-size: 12px;
+                text-align: center;
+            }
+
+            blockquote {
+                background-color: #ffff80;
+                font: 14px/22px sans-serif;
+                margin-top: 10px;
+                margin-bottom: 60px;
+                margin-left: 10%;
+                margin-right: 10%;
+                padding-left: 15px;
+                padding-right: 15px;
+                border: 1px solid #4b4b4b;
+                border-left: 3px solid #000000;
+            }
+            
+            footer {
+                margin-top: 50px;
+                text-align: center;
+                font-style: italic;
+                bottom:0;
+                left:25%;
+            }
+
+        </style>
+    </head>
+    <body>
+        <a name="top"></a>
+        <header>
+			<h1>Ejercicio 5: XSLT y XPath</h1>
+		</header>
+
+		<section>
+			<article>
+                <h2>Enunciado:</h2>
+                <ul>
+                    <h4><li>
+                        Dado el fichero LMSGI05_tarea.xml generar un documento XHTML que muestre una tabla según el formato de la siguiente plantilla (que se mantenga la plantilla del formato):</h4>
+                        <figure>
+                        <img src="./images/tabla_modelo.jpg" alt="Tabla modelo" class="tabla">
+                    </figure>
+                        </li>
+                    <h4><li>
+                        La nota final ha de estar en letra, es decir si es mayor o igual a 9 será SOBRESALIENTE, si es menor que 9 y mayor o igual a 7 será NOTABLE, si está entre 7 y 6, este último incluido será BIEN, si está entre 6 y 5 será SUFICIENTE y en otro caso INSUFICIENTE.
+
+                        Solo se deben mostrar los datos correspondientes a la convocatoria de Junio.
+                    </h4>
+                </ul>
+			</article>
+
+            <article>
+                <h2>Solución:</h2>
+                <h3>1. Creamos el fichero XSLT:</h3> 
+                <figure>
+                    <img src="./images/archivo_xsl.jpg" alt="fichero XSLT">
+                    <figcaption>Captura del fichero XSLT</figcaption>
+                </figure>
+
+                <blockquote>
+                    Se puede abrir el documento XLST usando <a href="./ejercicio/LMSGI05_TARE_R01.xsl">este enlace</a>.
+                </blockquote>
+
+                <h3>2. Modificamos el archivo XML para que cargue la hoja de estilo XSLT:</h3>
+                <figure>
+                    <img src="./images/archivo_xml.jpg" alt="XML modificado">
+                    <figcaption>Captura del fichero XML modificado</figcaption>
+                </figure>
+
+                <blockquote>
+                    El archivo XML modificado está disponible a través de  <a href="./ejercicio/LMSGI05_TARE_R01_modificado.xml">este enlace</a>.
+                </blockquote>
+
+                <h3>3. Generamos el archivo XHTML resultado utilizando <i>XML Copy Editor</i>:</h3>
+                <figure>
+                    <img src="./images/resultado.jpg" alt=" XHTML resultado">
+                    <figcaption>Capture del documento XHTML resultado</figcaption>
+                </figure>
+
+                <blockquote>
+                    Para acceder al archivo XHTML resultado, click <a href="./ejercicio/resultado.html">este enlace</a>.
+                </blockquote>
+
+                <h3>4. Abrimos el resultado en un navegador:</h3>
+                <figure>
+                    <img src="./images/resultado_web.jpg" alt="Documento XHTML resultado">
+                    <figcaption></figcaption>
+                </figure>
+                <br /> <br />
+
+
+            </article>
+		</section>
+        <br><br><h2><a href="../index.html">[Volver]</a></h2>
+		<footer>
+			Ejercicios de XSLT y XPath. 2017, Jesús M. Pérez. <a href="#top">Subir.</a>
+		</footer>
+    </body>
+</html>
+
