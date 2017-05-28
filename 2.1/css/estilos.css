@@ -45,6 +45,6 @@ tr:hover {background-color: lightgray}
 footer {
 	position:	fixed;
 	bottom: 5px;
-	left: calc(50% - 50px);
+	left: calc(50% - 180px);
 	
 }
